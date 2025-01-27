@@ -11,12 +11,12 @@
              xmlns:signUpFeature="clr-namespace:Kudomion.Features.SignUp"
              >
 
-    <StackLayout FlowDirection="LeftToRight" Spacing="20">
+    <StackLayout FlowDirection="LeftToRight" Spacing="0">
         <Label Text="Sign Up"
                    FontAttributes="Bold"
                    FontSize="25"
                    TextColor="White"
-                   Margin="15"
+                   Margin="0"
                 HorizontalOptions="CenterAndExpand" />
         <!--<VerticalStackLayout>
             --><!--Email Entry Will Be Added when Authentication fully implemented in the app--><!--
@@ -26,19 +26,27 @@
 
         </VerticalStackLayout>-->
 
-        <VerticalStackLayout Margin="0, 10, 0, 0">
+        <VerticalStackLayout Margin="0, 5, 0, 0">
             <Frame x:Name="usernameFrame" WidthRequest="250" BackgroundColor="#2f3030" Padding="2" BorderColor="Black" Margin="3">
-                <Entry x:Name="userName" WidthRequest="220" HorizontalOptions="CenterAndExpand" FontSize="13" ReturnType="Next" Placeholder="Enter your username..." TextColor="White" PlaceholderColor="White" />
+                <Entry x:Name="userName"  WidthRequest="220" HorizontalOptions="CenterAndExpand" FontSize="13" ReturnType="Next" Placeholder="Enter your username..." TextColor="White" PlaceholderColor="White" />
             </Frame>
         </VerticalStackLayout>
-        <VerticalStackLayout Margin="0, 10, 0, 0">
+
+        <VerticalStackLayout Margin="0, 5, 0, 0">
+            <Frame x:Name="emailFrame" WidthRequest="250" BackgroundColor="#2f3030" Padding="2" BorderColor="Black" Margin="3">
+                <Entry x:Name="email" WidthRequest="220" HorizontalOptions="CenterAndExpand" FontSize="13" ReturnType="Next" Placeholder="Enter your email..." TextColor="White" PlaceholderColor="White"/>
+            </Frame>
+
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Margin="0, 5, 0, 0">
             <Frame x:Name="passFrame" WidthRequest="250" BackgroundColor="#2f3030" Padding="2" BorderColor="Black" Margin="3">
                 <Entry x:Name="password" WidthRequest="220" IsPassword="True" HorizontalOptions="CenterAndExpand" FontSize="13" ReturnType="Next" Placeholder="Enter your password..." TextColor="White" PlaceholderColor="White"/>
             </Frame>
 
         </VerticalStackLayout>
 
-        <VerticalStackLayout Margin="0, 10, 0, 0">
+        <VerticalStackLayout Margin="0, 5, 0, 0">
             <Frame x:Name="confirmPassFrame" WidthRequest="250" BackgroundColor="#2f3030" Padding="2" BorderColor="Black" Margin="3">
                 <Entry x:Name="confirmPassword" WidthRequest="220" IsPassword="True" HorizontalOptions="CenterAndExpand" FontSize="13" ReturnType="Next" Placeholder="Confirm your password..." TextColor="White" PlaceholderColor="White"/>
             </Frame>
@@ -52,7 +60,7 @@
             HorizontalOptions="Center"
             TextColor="White"
             x:Name="SignUpBtn"
-            Clicked="SignUpButtonClicked"
+            Clicked="SignUpEmailAuthFirebase"
             BackgroundColor="#2f3030" 
             CornerRadius="50" />
         <!--<signUpFeature:SignUpFormView BindingContext="{Binding SignUpFormViewModel}" />-->

@@ -55,7 +55,21 @@ public partial class MainPage : ContentPage
 
     private async void ForgetPasswordClicked(object sender, EventArgs e)
     {
-        await DisplayAlert("Password Recovery System!", "Password Recovery System is Still Under Development! Please Contact Developer..", "OK!");
+        try
+        {
+            //Prompt Email Input:
+            string email = await DisplayPromptAsync("Password Recovery", "Please enter the email you already used to create your account?");
+
+            //Console.WriteLine("Entered Prompt: " + email); => Tested and Debugged: is working.
+            await firebase.authProvider.SendPasswordResetEmailAsync(email);
+
+            //Alert Success Message:
+            await DisplayAlert("Password Reset Link!", "Password-reset email was sent. Please check your email.", "OK!");
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error!", "An error just occured. Please contact developer. " + ex.Message, "OK!");
+        }
         //  await Navigation.PushAsync(new SignUpPage());
     }
 

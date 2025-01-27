@@ -17,14 +17,12 @@ namespace Kudomion
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SignUpPage : ContentPage
     {
-        FirebaseAuthProvider authProvider;
         FirebaseHelper firebase = new FirebaseHelper();
         //private readonly FirebaseAuthClient authClient;
         public SignUpPage(/*object bindingContext*/)
         {
             InitializeComponent();
-
-            authProvider = new FirebaseAuthProvider(new FirebaseConfig("apiKey"));
+            
            /* urName.ReturnCommand = new Command(() => userName.Focus());
             password.ReturnCommand = new Command(() => password.Focus());
             confirmPassword.ReturnCommand = new Command(() => confirmPassword.Focus());*/
@@ -34,37 +32,35 @@ namespace Kudomion
 
         }
 
-        //Firebase Auth Code-Behind Implementation (MVVM delayed):
-        /*1- SignUp:: Auth implementation is delayed: TODO: V1.5 release of the app.
-        private async void SignUpButtonClicked(object sender, EventArgs e)
-        {
-            //Check If Passwords Matched
-            if (urPass.Text != urConfirmPass.Text)
-            {
-                await DisplayAlert("Matching Error!", "Password and Confirm Password are not the same. Please check you spelling!", "OK!");
-                return;
-            }
+     private async void SignUpEmailAuthFirebase(object sender, EventArgs e)
+     {
             try
             {
-                //Create User: ** NOTE:: FirebaseAuth Implementation is delayed to a later period.
-                //await authClient.CreateUserWithEmailAndPasswordAsync(urEmail.Text, urPass.Text);
-                return;
+                //Checking before proceeding:
+
+                //Create UserAsync (UN, EMAIL, PW) => FirebaseAuth.
+                var newUserCreated =  await firebase.authProvider.CreateUserWithEmailAndPasswordAsync(email.Text, userName.Text, password.Text);
+                
+                //Send Email Verification Link:
+                await firebase.authProvider.SendEmailVerificationAsync(newUserCreated.FirebaseToken);
+
+                //Disable Sign-Up Btn:
+                SignUpBtn.IsEnabled = false;
+
+                //DisplayAlert:
+                await DisplayAlert("Welcome! One More Step..", "A verification email was sent. Please Check your email inbox.", "OK!");
+
+                //Reset Values:
+                userName.Text = string.Empty;
+                password.Text = string.Empty;
+                confirmPassword.Text = string.Empty;
+                email.Text = string.Empty;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
-                Debug.WriteLine($"Exception: {ex.Message}");
+                await DisplayAlert("Error!", "An error just occured. Please try again later. ", "OK!");
             }
-        }*/
-
-
-
-      /*  private async Task SignUpNewUser()
-        {
-            
-        }*/
-
-        //2- SignIn
-
+     }
 
         private async void SignUpButtonClicked(object sender, EventArgs e)
         {
@@ -130,37 +126,7 @@ namespace Kudomion
             }
 
         }
-
-    /*      private async void CheckIfUserExist()
-        {
-            //Check if user already exists.
-            List<string> userStrings = new List<string>();
-            var listAllUsers = await firebase.GetAllUsers();
-            if (!listAllUsers.Any())
-            {
-                await DisplayAlert("Success!", "User Registered Succesffully!", "OK!");
-                RegisterNewUser();
-                userName.Text = string.Empty;
-                password.Text = string.Empty;
-                confirmPassword.Text = string.Empty;
-                return;
-            }
-            foreach (UserModel item in listAllUsers)
-            {
-                userStrings.Add(item.name);
-            }
-            UserModel enteredUser = await FirebaseHelper.GetUsrFromName(userName.Text);
-            string enteredUserString = enteredUser.name;
-            bool userExits = userStrings.Contains(enteredUserString);
-            Console.WriteLine("User Status: " + userExits);
-
-            if (userExits == true)
-            {
-                await DisplayAlert("User Exists!", "Sorry. This Name Already Registered, Choose another name..", "OK!");
-                return;
-            }
-        }*/
-
+  
         private async void RegisterNewUser()
         {
             //Add User To DB.
@@ -171,6 +137,7 @@ namespace Kudomion
             userName.Text = string.Empty;
             password.Text = string.Empty;
             confirmPassword.Text = string.Empty;
+            email.Text = string.Empty;
         }
 
 

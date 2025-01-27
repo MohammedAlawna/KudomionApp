@@ -1,4 +1,5 @@
 ﻿//using Firebase.Auth.Providers;
+using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Database.Query;
 using Kudomion.Model;
@@ -13,20 +14,20 @@ namespace Kudomion.FirebaseManager
 {
     public class FirebaseHelper
     {
-        //DateTime ref:
-        DateTime dateTimeRef = new DateTime();
 
-//        public FirebaseAuthProvider authProvider;
+        public FirebaseAuthProvider authProvider;
 
-        //Follow this Article: https://www.c-sharpcorner.com/article/xamarin-forms-working-with-firebase-realtime-database-crud-operations/
         public FirebaseClient firebaseClient = new FirebaseClient("https://kudo1-38995-default-rtdb.firebaseio.com/");
-       // public static string GlobalAPi = "https://kudo1-38995-default-rtdb.firebaseio.com/";
         public static FirebaseClient GlobalFBClient = new FirebaseClient("https://kudo1-38995-default-rtdb.firebaseio.com/");
+        
+        public FirebaseHelper()
+        {
+            authProvider = new FirebaseAuthProvider(
+                new FirebaseConfig("AIzaSyAaahksGmC2M1IpC2gKmIY0DBIQcBqZInA"));
+        }
+        
         //Tournament Manager:
         //Get All Tournaments in DB.
-
-
-
         public async Task<List<Tournament>> GetAllTournaments()
         {
             try
