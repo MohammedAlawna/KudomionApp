@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KudomionApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+ef852355d02acbcca7920ce0837675f15c569a8c")]
 [assembly: System.Reflection.AssemblyProductAttribute("KudomionApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KudomionApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
