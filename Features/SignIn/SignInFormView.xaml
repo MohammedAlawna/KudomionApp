@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kudomion.Features.SignIn.SignInFormView">
+    <VerticalStackLayout>
+        <VerticalStackLayout>
+            
+            <Frame x:Name="usernameFrame" WidthRequest="250" BackgroundColor="#2f3030" Padding="2" BorderColor="Black" Margin="3">
+                <Entry x:Name="userNameText" WidthRequest="220" Text="{Binding Email}" HorizontalOptions="CenterAndExpand" FontSize="13" ReturnType="Next" Placeholder="Enter your email..." TextColor="White" PlaceholderColor="White"/>
+            </Frame>
+            
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Margin="0,10,0,0">
+            <Frame WidthRequest="250" x:Name="passwordFrame" BackgroundColor="#2f3030" Padding="2" BorderColor="Black"  Margin="3">
+                <Entry x:Name="passwordText" Text="{Binding Password}" WidthRequest="220" Placeholder="Enter your password..." FontSize="13" IsPassword="True" HorizontalOptions="CenterAndExpand" ReturnType="Done" TextColor="White" PlaceholderColor="White"></Entry>
+            </Frame>
+            
+        </VerticalStackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button
+        VerticalOptions="Center"
+        Text="Login"
+        WidthRequest="90"
+        TextColor="White"
+        Command="{Binding SignInCommand}"
+       
+        Margin="5"
+        BackgroundColor="RoyalBlue" 
+        BorderWidth="1.5"
+        CornerRadius="50"></Button>
+
+            <Button
+    WidthRequest="110"
+        VerticalOptions="Center"
+        Text="Register"
+        TextColor="White"
+        Clicked="TapGestureRecognizer_Tapped"
+        BackgroundColor="#212121" 
+        BorderWidth="1.5"
+        CornerRadius="50"></Button>
+
+        </StackLayout>
+
+        <!--<Button
+            Margin="0,25,0,0"
+            Command="{Binding SignInCommand}"
+            Text="Sign In" />-->
+    </VerticalStackLayout>
+</ContentView>

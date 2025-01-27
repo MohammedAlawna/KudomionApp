@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#1c1c1c"
+             FlowDirection="LeftToRight"
+             x:Class="Kudomion.ViewModel.SimpleChat">
+    <ContentPage.Content>
+        <ScrollView FlowDirection="LeftToRight" VerticalOptions="FillAndExpand" Margin="10">
+            <StackLayout WidthRequest="300" VerticalOptions="CenterAndExpand" Margin="20" >
+                <Border WidthRequest="275" Stroke="Black" BackgroundColor="#2c2c2e" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+                    <Label Text="Connect system is not available in this release. An improved connect, chat and community system is under development."
+                FontSize="18"
+                TextColor="White"
+                Margin="10" 
+                HorizontalTextAlignment="Center" />
+                </Border>
+           
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

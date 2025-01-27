@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             FlowDirection="LeftToRight"
+             x:Class="Kudomion.UsersPage">
+
+    <StackLayout>
+        <CollectionView x:Name="myCollectionView" SelectionMode="Single" Margin="20, 5, 20, 0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Id}"
+                                   Grid.Row="0" Grid.RowSpan="2"
+                               TextColor="DarkOrange"
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="CenterAndExpand"
+                                   />
+
+                            <Label  Text="{Binding name}" Grid.Row="0" Grid.Column="1"
+                                   VerticalOptions="CenterAndExpand"
+                                   FontSize="20"
+                                    TextColor="DarkOrange"
+                                   FontAttributes="Bold"/>
+
+                            <Label TextColor="DarkOrange" Text="{Binding password}" Grid.Row="1" Grid.Column="1"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+ 
+</ContentPage>

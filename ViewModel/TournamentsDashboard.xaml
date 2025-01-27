@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kudomion.ViewModel.TournamentsDashboard"
+             BackgroundColor="#1c1c1c"
+             FlowDirection="LeftToRight"
+            >
+    <ContentPage.Content>
+		<RefreshView x:Name="RefreshIndicator" Command="{Binding RefreshCommand}" RefreshColor="RoyalBlue" VerticalOptions="FillAndExpand">
+        <ScrollView FlowDirection="LeftToRight" Margin="10" VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <Label
+            Text="Tournaments" FontSize="30"
+            Margin="5"
+            BackgroundColor="Transparent"
+            TextColor="White"
+            VerticalOptions="Start" 
+            HorizontalOptions="Center" />
+
+               
+
+                <StackLayout VerticalOptions="FillAndExpand">
+
+                    <StackLayout Margin="5" x:Name="TournamentItemCard">
+                        <StackLayout>
+                            <CollectionView VerticalOptions="FillAndExpand" x:Name="TournamentsToLoad">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="300" HeightRequest="345">
+                                            <StackLayout VerticalOptions="Center">
+                                                <Label Text="{Binding title}"
+                                                 HorizontalOptions="Center"
+                                                 TextColor="Gold"
+                                                 FontAttributes="Bold"
+                                                 FontSize="15"
+                                                 />
+
+                                                <Image Margin="5" WidthRequest="160" x:Name="TournamentBanner" Source="{Binding tournyBannerSrc}" />
+
+           
+                                                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                                                <Button WidthRequest="150" Margin="5" Text="View Details" Clicked="ViewDetailsButtonClicked" TextColor="White" BackgroundColor="RoyalBlue"/>
+                                                <Button WidthRequest="150" Text="Sign Up" Clicked="SignUpButtonClicked" TextColor="White" BackgroundColor="Orange"/>
+                                                </StackLayout>
+                                            
+                                            </StackLayout>
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="25" />
+                                            </Border.StrokeShape>
+                                        </Border>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+
+        </ScrollView>
+		</RefreshView>
+    </ContentPage.Content>
+</ContentPage>

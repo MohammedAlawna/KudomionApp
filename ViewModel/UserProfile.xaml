@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kudomion.ViewModel.UserProfile"
+             BackgroundColor="#1c1c1c"
+             FlowDirection="LeftToRight"
+             >
+    <ScrollView VerticalOptions="FillAndExpand" Margin="10">
+        <StackLayout>
+            
+            <StackLayout>
+            <Image Source="https://i.imgur.com/Z6jG6BH.png" Margin="10" HeightRequest="110"/>
+            <Label FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="White" Text="Kudo Shinichi" x:Name="UserProfileName" FontSize="20"/>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <!--<Image WidthRequest="75" HorizontalOptions="Center" x:Name="invDuel" Source="btlebtn">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="InviteToDuelClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image WidthRequest="75" HorizontalOptions="Center" x:Name="chatReq" Source="chtbtn">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SendChatRequest"/>
+                    </Image.GestureRecognizers>
+                </Image>-->
+                
+                
+                
+            </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="88"/>
+                    <ColumnDefinition Width="95"/>
+                    <ColumnDefinition Width="95"/>
+                </Grid.ColumnDefinitions>
+
+                <Label BackgroundColor="RoyalBlue" Text="Duels" Grid.Row="0" HorizontalTextAlignment="Center" Grid.Column="0" TextColor="White" FontSize="18" FontAttributes="Bold"/>
+                <Label BackgroundColor="RoyalBlue" Text="Points" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" TextColor="White" FontSize="18" FontAttributes="Bold"/>
+                <Label BackgroundColor="RoyalBlue" Text="Ranking" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="Center" TextColor="White" FontSize="18" FontAttributes="Bold"/>
+                <Label x:Name="noDuels" BackgroundColor="#2c2c2c" Text="0" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" TextColor="White" FontSize="18" FontAttributes="Bold"/>
+                <Label x:Name="noPoints" Background="#2c2c2c" Text="0" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" TextColor="White" FontSize="18" FontAttributes="Bold"/>
+                <Label x:Name="noRanking" BackgroundColor="#2c2c2c" Text="0" Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="18" TextColor="White"/>
+            </Grid>
+        </StackLayout>
+       
+
+        <StackLayout Orientation="Vertical" Margin="5">
+                <Picker HorizontalTextAlignment="Center" Margin="3" SelectedIndex="1" x:Name="userStatPicker" TextColor="White" BackgroundColor="#323232"/>
+            </StackLayout>
+
+            <StackLayout x:Name="stats" IsVisible="false" Margin="5">
+                <Border Margin="0" BackgroundColor="#323232" Stroke="Black" >
+                    <StackLayout Margin="5">
+                    <Button BackgroundColor="DarkOrange" Margin="5" TextColor="White" Text="Add as a Friend" />
+                    <Button BackgroundColor="RoyalBlue" Margin="5" x:Name="InviteToDuelBtn" Text="Invite to Duel" Clicked="InviteToDuelClicked" TextColor="White"/>
+                    <Button BackgroundColor="LimeGreen" Margin="5" Text="Send message" TextColor="White"/>
+                </StackLayout>
+                </Border>
+            </StackLayout>
+
+            <StackLayout x:Name="duels" IsVisible="false" Margin="5">
+                <Border Stroke="Black" Margin="0" BackgroundColor="#323232">
+                    <StackLayout>
+                    <CollectionView HeightRequest="220" x:Name="userDuels">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                <StackLayout Margin="10">
+                                    <Border Stroke="Black" BackgroundColor="RoyalBlue" HorizontalOptions="CenterAndExpand" WidthRequest="260">
+                                        <StackLayout HorizontalOptions="CenterAndExpand" Margin="5" VerticalOptions="Center">
+                                            <!--<Grid Margin="5" >
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition/>
+                                                </Grid.RowDefinitions>
+
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                </Grid.ColumnDefinitions>-->
+
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="25" VerticalOptions="Center">
+                                                <Label Text="{Binding p1}" FontAttributes="Bold" FontSize="16" VerticalOptions="Center" HorizontalTextAlignment="Start" HorizontalOptions="Start" TextColor="White"/>
+                                                <Image Source="https://i.imgur.com/ErsPGOj.png" VerticalOptions="Center" WidthRequest="35" HeightRequest="35" HorizontalOptions="Center"/>
+                                                <Label Text="{Binding p2}" FontAttributes="Bold" FontSize="16" VerticalOptions="Center" HorizontalTextAlignment="End" HorizontalOptions="End" TextColor="White"/>
+                                                 </StackLayout>
+                                                <!--</Grid>-->
+                                        </StackLayout>
+                                    </Border>
+                                </StackLayout>
+                            </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </StackLayout>
+                </Border>
+            </StackLayout>
+
+            <StackLayout x:Name="posts" IsVisible="false" Margin="5">
+                <Border Stroke="Black" Margin="0" BackgroundColor="#323232">
+                    <StackLayout Margin="5">
+                        <Label FontSize="16" FontAttributes="Italic" HorizontalTextAlignment="Center" TextColor="RoyalBlue" Text="Posts Currently Not Available.."/>
+
+                    </StackLayout>
+                </Border>
+            </StackLayout>
+
+            <StackLayout x:Name="signature" IsVisible="false" Margin="5">
+                <Border Stroke="Black" Margin="0" BackgroundColor="#323232">
+                    <StackLayout Margin="5">
+                        <Label FontSize="16" FontAttributes="Italic" HorizontalTextAlignment="Center" TextColor="RoyalBlue" Text="Signature Currently Not Available."/>
+                    </StackLayout>
+                </Border>
+            </StackLayout>
+
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>

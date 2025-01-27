@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#1c1c1c"
+             x:Class="Kudomion.MVVM.Views.MultiplePageContainer">
+
+    <ScrollView FlowDirection="LeftToRight" Margin="5" VerticalOptions="FillAndExpand" HorizontalOptions="Center">
+        <StackLayout x:Name="ContainerOfAllViews" Orientation="Vertical" HorizontalOptions="Center">
+            <StackLayout x:Name="GamesView" IsVisible="False" Spacing="10">
+                <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="300" HeightRequest="315">
+                    <StackLayout>
+                        <Label Margin="5" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" Text="EDOPro" FontSize="27"/>
+                        <Image Source="https://i.imgur.com/i1akDJZ.jpeg" WidthRequest="160"/>
+                        <Label Margin="5" HorizontalOptions="Center" FontSize="10" FontAttributes="Italic" TextColor="White" Text="Fully-automated, classic, light Yu-Gi-Oh! Multiplayer game." />
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5" Spacing="3">
+                            <Button Text="Download" Clicked="OnEdoProDownloadClicked" FontSize="15" TextColor="White" BackgroundColor="DarkOrange" />
+                            <Button Text="Beginner's Guide" Clicked="OnEdoProGuideClicked" FontSize="15" TextColor="White" BackgroundColor="RoyalBlue"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="25" />
+                    </Border.StrokeShape>
+                </Border>
+
+                <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="300" HeightRequest="315">
+                    <StackLayout>
+                        <Label Margin="5" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" Text="Master Duel" FontSize="27"/>
+                        <Image Source="https://i.imgur.com/GBjMR92.jpeg" WidthRequest="160"/>
+                        <Label Margin="5" HorizontalOptions="Center" FontSize="10" FontAttributes="Italic" TextColor="White" Text="Fully-automated, 3D, Play-to-Win Yu-Gi-Oh! game." />
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5" Spacing="3">
+                            <Button Text="Download" Clicked="OnMasterDuelDownloadClicked" FontSize="15" TextColor="White" BackgroundColor="DarkOrange" />
+                            <Button Text="Beginner's Guide" Clicked="OnMasterDuelGuideClicked" FontSize="15" TextColor="White" BackgroundColor="RoyalBlue"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="25" />
+                    </Border.StrokeShape>
+                </Border>
+
+                <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="300" HeightRequest="315">
+                    <StackLayout>
+                        <Label Margin="5" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" Text="YGO Omega" FontSize="27"/>
+                        <Image Source="https://i.imgur.com/EU81N6v.jpeg" WidthRequest="160"/>
+                        <Label Margin="5" HorizontalOptions="Center" FontSize="10" FontAttributes="Italic" TextColor="White" Text="Fully-automated, 3D, Yu-Gi-Oh! Multiplayer game." />
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5" Spacing="3">
+                            <Button Clicked="OnYGOOmegaDownloadClicked"  Text="Download" FontSize="15" TextColor="White" BackgroundColor="DarkOrange" />
+                            <Button Clicked="OnYGOOmegaGuideClicked" Text="Beginner's Guide" FontSize="15" TextColor="White" BackgroundColor="RoyalBlue"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="25" />
+                    </Border.StrokeShape>
+                </Border>
+
+                <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="300" HeightRequest="315">
+                    <StackLayout>
+                        <Label Margin="5" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" Text="MDPro3" FontSize="27"/>
+                        <Image Source="https://i.imgur.com/iaJB61q.jpeg" WidthRequest="160"/>
+                        <Label Margin="5" HorizontalOptions="Center" FontSize="10" FontAttributes="Italic" TextColor="White" Text="A Mod of Master Duel, all-cards Yu-Gi-Oh! game." />
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5" Spacing="3">
+                            <Button Clicked="OnMDProDownloadClicked" Text="Download" FontSize="15" TextColor="White" BackgroundColor="DarkOrange" />
+                            <Button Clicked="OnMDProGuideClicked" Text="Beginner's Guide" FontSize="15" TextColor="White" BackgroundColor="RoyalBlue"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="25" />
+                    </Border.StrokeShape>
+                </Border>
+                <!--https://imgur.com/a/xGE9i5F-->
+                <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="300" HeightRequest="315">
+                    <StackLayout>
+                        <Label Margin="5" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" Text="Duel Links" FontSize="27"/>
+                        <Image Source="https://i.imgur.com/7lU8wcF.jpeg" WidthRequest="160"/>
+                        <Label Margin="5" HorizontalOptions="Center" FontSize="10" FontAttributes="Italic" TextColor="White" Text="A simple, modern, Play-to-Win Yu-Gi-Oh! game." />
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5" Spacing="3">
+                            <Button Clicked="OnDuelLinksDownloadClicked" Text="Download" FontSize="15" TextColor="White" BackgroundColor="DarkOrange" />
+                            <Button Clicked="OnDuelLinksGuideClicked" Text="Beginner's Guide" FontSize="15" TextColor="White" BackgroundColor="RoyalBlue"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="25" />
+                    </Border.StrokeShape>
+                </Border>
+
+                <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="300" HeightRequest="315">
+                    <StackLayout>
+                        <Label Margin="5" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" Text="Dueling Book" FontSize="27"/>
+                        <Image Source="https://i.imgur.com/VB223Pb.jpeg" WidthRequest="160"/>
+                        <Label Margin="5" HorizontalOptions="Center" FontSize="10" FontAttributes="Italic" TextColor="White" Text="A web-based, manual, light Yu-Gi-Oh! game." />
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5" Spacing="3">
+                            <Button Clicked="OnDuelingBookDownloadClicked" Text="Play Now" FontSize="15" TextColor="White" BackgroundColor="DarkOrange" />
+                            <Button Clicked="OnDuelingBookGuideClicked" Text="Beginner's Guide" FontSize="15" TextColor="White" BackgroundColor="RoyalBlue"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="25" />
+                    </Border.StrokeShape>
+                </Border>
+            </StackLayout>
+
+            <StackLayout x:Name="ClassroomView" IsVisible="False" Spacing="10">
+                <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="300" HeightRequest="315">
+                    <StackLayout>
+                        <!--TODO: CollectionView, and retrieve combo guides from db backend-->
+                        <Label Text="Yubel" Margin="5" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" FontSize="27"/>
+                        <Image Source="https://i.imgur.com/W5CLmoM.png" WidthRequest="160" />
+                        <StackLayout Orientation="Horizontal" Margin="5" HorizontalOptions="Center">
+                            <Button TextColor="White" Text="Combo Tutorial" Clicked="OnYubelComboClicked" BackgroundColor="DarkOrange"/>
+                            <Button TextColor="White" Text="View Deck" Clicked="OnYubelViewClicked" BackgroundColor="RoyalBlue"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Border>
+
+                <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="300" HeightRequest="315">
+                    <StackLayout>
+                        <!--TODO: CollectionView, and retrieve combo guides from db backend-->
+                        <Label Text="Tenpai Dragon" Margin="5" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" FontSize="27"/>
+                        <Image Source="https://i.imgur.com/cj4dsJy.png" WidthRequest="160" />
+                        <StackLayout Orientation="Horizontal" Margin="5" HorizontalOptions="Center">
+                            <Button TextColor="White" Text="Combo Tutorial" Clicked="OnTenpaiComboClicked" BackgroundColor="DarkOrange"/>
+                            <Button TextColor="White" Text="View Deck" Clicked="OnTenpaiViewClicked" BackgroundColor="RoyalBlue"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Border>
+
+                <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="300" HeightRequest="315">
+                    <StackLayout>
+                        <!--TODO: CollectionView, and retrieve combo guides from db backend-->
+                        <Label Text="Fire King" Margin="5" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" FontSize="27"/>
+                        <Image Source="https://i.imgur.com/5zXXWn1.png" WidthRequest="160" />
+                        <StackLayout Orientation="Horizontal" Margin="5" HorizontalOptions="Center">
+                            <Button TextColor="White" Text="Combo Tutorial" Clicked="OnFireKingComboClicked" BackgroundColor="DarkOrange"/>
+                            <Button TextColor="White" Text="View Deck" Clicked="OnFireKingViewClicked" BackgroundColor="RoyalBlue"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Border>
+
+                <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="300" HeightRequest="315">
+                    <StackLayout>
+                        <!--TODO: CollectionView, and retrieve combo guides from db backend-->
+                        <Label Text="Dragon Link" Margin="5" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" FontSize="27"/>
+                        <Image Source="https://i.imgur.com/7ksN0O7.jpeg" WidthRequest="160" />
+                        <StackLayout Orientation="Horizontal" Margin="5" HorizontalOptions="Center">
+                            <Button TextColor="White" Text="Combo Tutorial" Clicked="OnDragonLinkComboClicked" BackgroundColor="DarkOrange"/>
+                            <Button TextColor="White" Text="View Deck" Clicked="OnDragonLinkViewClicked" BackgroundColor="RoyalBlue"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Border>
+            </StackLayout>
+
+            <StackLayout x:Name="AnimeView" IsVisible="False" Spacing="10">
+                <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="300" HeightRequest="355">
+                    <StackLayout>
+                        <Label Text="Yu-Gi-O! DM" Margin="5" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" FontSize="27"/>
+                        <Image Source="https://i.imgur.com/0iqiaKr.jpeg" WidthRequest="160" />
+                        <StackLayout Orientation="Horizontal" Margin="5" HorizontalOptions="Center">
+                            <Button TextColor="White" Text="WATCH! Now" Clicked="OnYGODMClicked" BackgroundColor="DarkOrange"/>
+                            <Button TextColor="White" Text="Report Missing" Clicked="OnYGOReportClicked" BackgroundColor="RoyalBlue"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Border>
+
+                <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="300" HeightRequest="355">
+                    <StackLayout>
+                        <Label Text="Yu-Gi-O! GX" Margin="5" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" FontSize="27"/>
+                        <Image Source="https://i.imgur.com/tull9Zs.jpeg" WidthRequest="160" />
+                        <StackLayout Orientation="Horizontal" Margin="5" HorizontalOptions="Center">
+                            <Button TextColor="White" Text="WATCH! Now" BackgroundColor="DarkOrange"/>
+                            <Button TextColor="White" Text="Report Missing" Clicked="OnYGOReportClicked" BackgroundColor="RoyalBlue"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Border>
+
+                <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="300" HeightRequest="355">
+                    <StackLayout>
+                        <Label Text="Yu-Gi-O! 5Ds" Margin="5" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" FontSize="27"/>
+                        <Image Source="https://i.imgur.com/PzK4T87.jpeg" WidthRequest="160" />
+                        <StackLayout Orientation="Horizontal" Margin="5" HorizontalOptions="Center">
+                            <Button TextColor="White" Text="WATCH! Now" BackgroundColor="DarkOrange"/>
+                            <Button TextColor="White" Text="Report Missing" Clicked="OnYGOReportClicked" BackgroundColor="RoyalBlue"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Border>
+
+                <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="300" HeightRequest="355">
+                    <StackLayout>
+                        <Label Text="Yu-Gi-O! Zexal" Margin="5" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" FontSize="27"/>
+                        <Image Source="https://i.imgur.com/EBWo6yH.jpeg" WidthRequest="160" />
+                        <StackLayout Orientation="Horizontal" Margin="5" HorizontalOptions="Center">
+                            <Button Text="WATCH! Now" Clicked="OnYGOZexalClicked" BackgroundColor="DarkOrange"/>
+                            <Button Text="Report Missing" Clicked="OnYGOReportClicked" BackgroundColor="RoyalBlue"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Border>
+
+                <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="300" HeightRequest="355">
+                    <StackLayout>
+                        <Label Text="Yu-Gi-O! Movies" Margin="5" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" FontSize="27"/>
+                        <Image Source="https://i.imgur.com/XhaZgi4.png" WidthRequest="160" />
+                        <StackLayout Orientation="Horizontal" Margin="5" HorizontalOptions="Center">
+                            <Button TextColor="White" Text="WATCH! Now" Clicked="OnYGOMoviesClicked" BackgroundColor="DarkOrange"/>
+                            <Button TextColor="White" Text="Report Missing" Clicked="OnYGOReportClicked" BackgroundColor="RoyalBlue"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Border>
+            </StackLayout>
+            
+        </StackLayout>
+
+       
+    </ScrollView>
+ 
+</ContentPage>

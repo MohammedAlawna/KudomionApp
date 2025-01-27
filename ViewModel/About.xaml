@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#1c1c1c"
+             FlowDirection="LeftToRight"
+             x:Class="Kudomion.ViewModel.About">
+    <ContentPage.Content>
+        <ScrollView FlowDirection="LeftToRight" Margin="10" VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <Label Text="Kudomion Beta" FontSize="27" HorizontalOptions="CenterAndExpand" TextColor="Gold" FontAttributes="Bold"/>
+                <Label Text="Developed by KUDO" HorizontalOptions="Start" FontSize="18" TextColor="White"/>
+                <Label Text="Powered by YUKAJO" HorizontalOptions="Start" FontSize="18" TextColor="White" />
+
+                <Label Margin="0" Text="Social Media" FontSize="27" HorizontalOptions="CenterAndExpand" TextColor="RoyalBlue" FontAttributes="Bold" />
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Image Margin="5" HeightRequest="55" x:Name="Discord" Source="https://i.imgur.com/AHWP8b8.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="DiscordClicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Image Margin="5" HeightRequest="55" x:Name="Facebook" Source="https://i.imgur.com/wQarZse.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="FacebookClicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Image Margin="5" HeightRequest="55" x:Name="Youtube" Source="https://i.imgur.com/bt8zQT3.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="YoutubeClicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                   
+                </StackLayout>
+
+                <Label Margin="0" Text="External Links" TextColor="Gold" FontSize="27" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" />
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Yukajo Blog" FontSize="18" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                    <Image Margin="0" HeightRequest="200" x:Name="YKJBlog" Source="https://i.imgur.com/7qfA4gM.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="BlogClicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Label Text="Yukajo Power of Thousands Men (2021)" FontSize="15" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                    <Image Margin="0" HeightRequest="200" x:Name="YKJPtm" Source="https://i.imgur.com/drTYlLL.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="YKJPtmClicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Label Text="Yukajo One Man Army (2013)" FontSize="18" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                    <Image Margin="0" HeightRequest="200" x:Name="YKJOma" Source="https://i.imgur.com/jaIMnCH.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="YKJOmaClicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

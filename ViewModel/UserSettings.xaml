@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#1c1c1c"
+             FlowDirection="LeftToRight"
+             x:Class="Kudomion.ViewModel.UserSettings">
+    <ContentPage.Content>
+        <ScrollView FlowDirection="LeftToRight" VerticalOptions="FillAndExpand">
+            <StackLayout>
+            <!--<StackLayout>
+            <Frame Margin="15" BackgroundColor="Transparent" BorderColor="Orange">
+                <StackLayout>
+                    <Label Text="User Settings" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="20"/>
+                </StackLayout>
+
+            </Frame>
+            <StackLayout>-->
+            <StackLayout Margin="10">
+                <Image x:Name="prfImg" HorizontalOptions="Center" Grid.Column="0" Grid.Row="0" Margin="3" Source="prfle" HeightRequest="150">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnClickAvatar"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+
+            <StackLayout Margin="10">
+                <Border Margin="5" BackgroundColor="Transparent" Stroke="RoyalBlue" HeightRequest="237">
+                    <StackLayout Margin="10">
+                        <Border Stroke="Orange" BackgroundColor="#1c1c1c" Margin="5">
+                        <Entry x:Name="nUser" HorizontalTextAlignment="Center" Placeholder="Enter New Username.." TextColor="White" PlaceholderColor="White"/>
+                        </Border>
+                        <Border Stroke="Orange" BackgroundColor="#1c1c1c" Margin="5">
+                            <Entry HorizontalTextAlignment="Center" x:Name="nPass" IsPassword="True" Placeholder="Enter New Password.." TextColor="White" PlaceholderColor="White"/>
+                        </Border>
+                        <Border Stroke="Orange" BackgroundColor="#1c1c1c" Margin="5">
+                            <Entry x:Name="nPassConfirm" IsPassword="True" HorizontalTextAlignment="Center" Placeholder="Enter New Password Again.." TextColor="White" PlaceholderColor="White"/>
+                        </Border>
+                        <!--<Border Stroke="Orange" BackgroundColor="#1c1c1c" Margin="5">
+                            <Entry HorizontalTextAlignment="Center" x:Name="nEmail" Placeholder="Enter New Email..(not available)" TextColor="White" PlaceholderColor="White" IsEnabled="False"/>
+                        </Border>-->
+                            <Button BackgroundColor="Orange" Text="Submit" Margin="5" Clicked="SubmitButton" TextColor="White"/>
+                    </StackLayout>
+                </Border>
+            </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kudomion.ViewModel.TournamentDetails"
+             BackgroundColor="#1c1c1c"
+             FlowDirection="LeftToRight"
+            >
+    <ContentPage.Content>
+        <ScrollView FlowDirection="LeftToRight" Margin="10" VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <Label
+            Text="YKJ Rapid Tournament" FontSize="20"
+            Margin="3"
+            x:Name="tournamentTitle"
+            BackgroundColor="Transparent"
+            TextColor="White"
+            VerticalOptions="Start" 
+            HorizontalOptions="Center" />
+                
+                <Image Margin="3" x:Name="TournamentBanner" HeightRequest="195" Source="https://i.imgur.com/7YZAM21.jpg" />
+
+                <StackLayout Orientation="Vertical" Margin="3">
+                    <Picker HorizontalTextAlignment="Center" Margin="0" SelectedIndex="1" x:Name="tournamentState" TextColor="White" BackgroundColor="#323232"/>
+                </StackLayout>
+
+                <StackLayout x:Name="info" IsVisible="false" Margin="5">
+                    <Label Text="Rules" HorizontalOptions="Center" FontSize="19" FontAttributes="Bold" TextColor="RoyalBlue"/>
+                    <Label Text="1- Duel Type: Match" FontSize="16" TextColor="White"/>
+                    <Label Text="2- Card Pool: TCG" FontSize="16" TextColor="White"/>
+                    <Label Text="3- Changing Decks isn't allowed" FontSize="16" TextColor="White"/>
+                    <Label Text="4- Game: EDOPro" FontSize="16" TextColor="White"/>
+                    <Label Text="5- Number of Participants: 8" FontSize="16" TextColor="White"/>
+                    <Label Text="6- Single Elimination." FontSize="16" TextColor="White"/>
+                    <Label Text="7- Automatic matchup" FontSize="16" TextColor="White"/>
+                </StackLayout>
+
+                <StackLayout x:Name="SignUp" IsVisible="false" Margin="5">
+                    <Label Text="- Please read the rules that are listed in the 'Info' section before joining the tournament." FontSize="16" TextColor="White"/>
+                    <Label Text="- If the tournament slots were full, then the Join button will be disabled / give an error message when you try to click it." FontSize="16" TextColor="White"/>
+                    <Label Text="- You can join the tournament by clicking the `Join` button which is located in the Tournaments Dashboard page.." FontSize="16" TextColor="White"/>
+                    <!--<Button Text="Join" BackgroundColor="RoyalBlue" Clicked="JoinBtn_Clicked"/>-->
+                    <Label Text="* You are allowed/not allowed to join this event." x:Name="SignupStatus" FontSize="16" TextColor="White"/>
+                </StackLayout>
+
+                <StackLayout x:Name="bracket" IsVisible="false" Margin="5">
+                    <StackLayout Margin="0">
+                        <Label HorizontalOptions="Center" Text="Round 1" FontSize="23" FontAttributes="Bold" TextColor="#f2c305"/>
+                        <Border Margin="5" Stroke="#f2c305" BackgroundColor="#333232">
+                            <StackLayout VerticalOptions="Center">
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                                    <Label x:Name="R1P1" Text="Player 1" Margin="13" FontAttributes="Bold" FontSize="16" HorizontalTextAlignment="Center" TextColor="White" Grid.Column="0" Grid.Row="0"/>
+                                    <Image Source="btle" WidthRequest="35" HeightRequest="35"/>
+                                    <!--<Label Text="V.S" TextColor="Gold" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="0"/>-->
+                                    <Label x:Name="R1P2" Margin="13" Text="Player 2" FontAttributes="Bold" FontSize="16" HorizontalTextAlignment="Center" TextColor="White"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Border>
+
+                        <StackLayout>
+                            <Border Margin="5" Stroke="#ff9d00" BackgroundColor="#333232">
+                                <StackLayout VerticalOptions="Center">
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                                        <Label x:Name="R1P3" Text="Player 3" Margin="13" FontAttributes="Bold" FontSize="16" HorizontalTextAlignment="Center" TextColor="White" Grid.Column="0" Grid.Row="0"/>
+                                        <Image Source="btle" WidthRequest="30" HeightRequest="50"/>
+                                        <!--<Label Text="V.S" TextColor="Gold" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="0"/>-->
+                                        <Label x:Name="R1P4" Margin="13" Text="Player 4" FontAttributes="Bold" FontSize="16" HorizontalTextAlignment="Center" TextColor="White"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Border>
+                            
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Border Margin="5" Stroke="#ff9d00" BackgroundColor="#333232">
+                                <StackLayout VerticalOptions="Center">
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                                        <Label x:Name="R1P5" Text="Player 5" Margin="13" FontAttributes="Bold" FontSize="16" HorizontalTextAlignment="Center" TextColor="White" Grid.Column="0" Grid.Row="0"/>
+                                        <Image Source="btle" WidthRequest="30" HeightRequest="30"/>
+                                        <!--<Label Text="V.S" TextColor="Gold" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="0"/>-->
+                                        <Label x:Name="R1P6" Margin="13" Text="Player 6" FontAttributes="Bold" FontSize="16" HorizontalTextAlignment="Center" TextColor="White"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Border>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Border Margin="5" Stroke="#ff9d00" BackgroundColor="#333232">
+                                <StackLayout VerticalOptions="Center">
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                                        <Label x:Name="R1P7" Text="Player 7" Margin="13" FontAttributes="Bold" FontSize="16" HorizontalTextAlignment="Center" TextColor="White" Grid.Column="0" Grid.Row="0"/>
+                                        <Image Source="btle" WidthRequest="30" HeightRequest="30"/>
+                                        <!--<Label Text="V.S" TextColor="Gold" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="0"/>-->
+                                        <Label x:Name="R1P8" Margin="13" Text="Player 8" FontAttributes="Bold" FontSize="16" HorizontalTextAlignment="Center" TextColor="White"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Border>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label HorizontalOptions="Center" Text="Semi-Finals" FontSize="23" FontAttributes="Bold" TextColor="RoyalBlue"/>
+                        <Border Margin="5" Stroke="RoyalBlue" BackgroundColor="#333232">
+                            <StackLayout VerticalOptions="Center">
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                                    <Label x:Name="R2P1" Text="Player 1" Margin="13" FontAttributes="Bold" FontSize="16" HorizontalTextAlignment="Center" TextColor="White" Grid.Column="0" Grid.Row="0"/>
+                                    <Image Source="btle" WidthRequest="30" HeightRequest="30"/>
+                                    <!--<Label Text="V.S" TextColor="Gold" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="0"/>-->
+                                    <Label x:Name="R2P2" Margin="13" Text="Player 2" FontAttributes="Bold" FontSize="16" HorizontalTextAlignment="Center" TextColor="White"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Border>
+
+
+                    </StackLayout>
+                    <Border Margin="5" Stroke="RoyalBlue" BackgroundColor="#333232">
+                        <StackLayout VerticalOptions="Center">
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                                <Label x:Name="R2P3" Text="Player 3" Margin="13" FontAttributes="Bold" FontSize="16" HorizontalTextAlignment="Center" TextColor="White" Grid.Column="0" Grid.Row="0"/>
+                                <Image Source="btle" WidthRequest="30" HeightRequest="30"/>
+                                <!--<Label Text="V.S" TextColor="Gold" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="0"/>-->
+                                <Label x:Name="R2P4" Margin="13" Text="Player 4" FontAttributes="Bold" FontSize="16" HorizontalTextAlignment="Center" TextColor="White"/>
+                            </StackLayout>
+                        </StackLayout>
+
+
+                    </Border>
+
+                    <StackLayout>
+                        <Label HorizontalOptions="Center" Text="Final" FontSize="23" FontAttributes="Bold" TextColor="#37ff00"/>
+                        <Border Margin="5" Stroke="#37ff00" BackgroundColor="#333232">
+                            <StackLayout VerticalOptions="Center">
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                                    <Label x:Name="R3P1" Text="Player 1" Margin="13" FontAttributes="Bold" FontSize="16" HorizontalTextAlignment="Center" TextColor="White" Grid.Column="0" Grid.Row="0"/>
+                                    <Image Source="btle" WidthRequest="30" HeightRequest="30"/>
+                                    <!--<Label Text="V.S" TextColor="Gold" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="0"/>-->
+                                    <Label x:Name="R3P2" Margin="13" Text="Player 2" FontAttributes="Bold" FontSize="16" HorizontalTextAlignment="Center" TextColor="White"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Border>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout x:Name="result" IsVisible="false" Margin="5">
+                <Label Text="Leaderboard" FontSize="25" HorizontalOptions="Center" FontAttributes="Bold" TextColor="RoyalBlue"/>
+                <Label Text="Winner: ??" x:Name="winnerText" FontSize="17" HorizontalOptions="Start" TextColor="White"/>
+                <Label Text="Second Place: ??" x:Name="secondPlaceText" HorizontalOptions="Start" FontSize="17" TextColor="White"/>
+                </StackLayout>
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

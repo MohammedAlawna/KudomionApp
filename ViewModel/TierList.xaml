@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#1c1c1c"
+             x:Class="Kudomion.ViewModel.TierList"
+             FlowDirection="LeftToRight"
+             xmlns:viewmodel="clr-namespace:Kudomion"
+            >
+    <ContentPage.Content>
+        <ScrollView FlowDirection="LeftToRight" Margin="10" VerticalOptions="FillAndExpand">
+            <StackLayout>
+
+                <Label Text="Tier List"
+                VerticalOptions="Start"
+                Margin="8"
+                TextColor="White"
+                FontSize="27"
+                HorizontalOptions="CenterAndExpand" />
+
+
+
+                <StackLayout>
+
+                    <StackLayout x:Name="topTierList">
+                        <StackLayout>
+                            <CollectionView x:Name="topDecksToLoad">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="290" HeightRequest="215">
+                                            <StackLayout Margin="5" VerticalOptions="Center">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image HeightRequest="67" HorizontalOptions="Start" x:Name="topDeckThumb" Source="{Binding topDeckSrc}" />
+                                                <Label Margin="20, 25, 0, 0" TextColor="White" FontSize="13"  HorizontalTextAlignment="Center" HorizontalOptions="Start" x:Name="topDeckName" Text="{Binding topDeckName}" />
+                                            </StackLayout>
+                                                <StackLayout Margin="5" Orientation="Vertical">
+                                                    <Button Clicked="ViewDeckButtonClicked" BackgroundColor="#49494a" Text="View" Margin="5" FontSize="14" TextColor="White" />
+                                                    <Button Clicked="DownloadDeckButtonClicked" BackgroundColor="RoyalBlue" Text="Download .YDK" Margin="5" TextColor="White" />
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </Border>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+    
+    
+<!--Commented Out MVVM Implementation
+x:DataType="viewmodel:ViewModelTest"
+<Entry Placeholder="Enter Text Trial" Text="{Binding Text}"/>
+<Button Command="{Binding AddCommand}" />
+<CollectionView ItemsSource="{Binding Items}" VerticalOptions="FillAndExpand" x:Name="topDecksToLoad">
+    <CollectionView.ItemTemplate>
+        <DataTemplate x:DataType="{x:Type x:String}">
+            --><!--<Frame BackgroundColor="#363636">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image x:Name="topDeckThumb" Source="{Binding topDeckThumb}" />
+                                    <Label x:Name="topDeckName" Text="{Binding topDeckName}" />
+                                </StackLayout>
+                            </Frame>--><!--
+        </DataTemplate>
+    </CollectionView.ItemTemplate>
+</CollectionView>-->

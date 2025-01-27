@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kudomion.ViewModel.NewsFeed"
+             FlowDirection="LeftToRight"
+             BackgroundColor="#1c1c1c"
+             >
+    <StackLayout FlowDirection="LeftToRight">
+
+        <StackLayout HorizontalOptions="Center" Spacing="5" Orientation="Horizontal" Margin="10">
+            <Button Clicked="CreatePostClicked" FontAttributes="Bold" Text="Create Post" BackgroundColor="RoyalBlue" WidthRequest="150"/>
+            <Button Clicked="ReportPostClicked" FontAttributes="Bold" Text="Report Post" BackgroundColor="DarkRed" WidthRequest="150"/>
+        </StackLayout>
+        
+        <Frame BackgroundColor="Transparent" BorderColor="Transparent">
+                <StackLayout>
+                <CollectionView HeightRequest="470" x:Name="postsInNewsFeed">
+                    <CollectionView.ItemTemplate >
+                            <DataTemplate >
+                            <ScrollView>
+                                <StackLayout Margin="5">
+                                    <Frame  BorderColor="DarkGray" BackgroundColor="#303030" HorizontalOptions="CenterAndExpand">
+                                    <StackLayout HeightRequest="230" HorizontalOptions="CenterAndExpand">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                            
+                                            </Grid.ColumnDefinitions>
+                                           
+                                              
+                                            <Label Grid.Row="0" Grid.Column="0" FontSize="13" TextColor="White" Text="Hello Duelists. New Tournament Available."/>
+                                            <!--Image for Post (If exits!)-->
+                                            <Image Margin="5" Source="ygb" Grid.RowSpan="6" Grid.Row="2" Grid.Column="0" />
+                                                <!--Reaction Item Frame (if not exits, it counts 0)-->
+                                                <Image HorizontalOptions="Center" HeightRequest="30" Source="emj" Grid.Row="8" Grid.RowSpan="2">
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="StandradReactClicked"/>
+                                                    </Image.GestureRecognizers>
+                                                </Image>
+                                            <Label x:Name="lblNo" Margin="25,7,0,0" Grid.Row="8" Grid.RowSpan="2" Text="0" FontSize="14" TextColor="White" HorizontalOptions="Center"/>
+
+
+
+
+
+                                            </Grid>
+                                    </StackLayout>
+                                </Frame>
+                                </StackLayout>
+                            </ScrollView>
+                        </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+   
+</ContentPage>

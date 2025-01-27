@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Kudomion.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Kudomion"
+    xmlns:mvvm="clr-namespace:Kudomion.ViewModel.MVVM.Views"
+    xmlns:viewModel="clr-namespace:Kudomion.ViewModel"
+    xmlns:controls="clr-namespace:Kudomion.Controls"
+    Shell.BackgroundColor="RoyalBlue"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.TabBarBackgroundColor="#2e2e2e"
+    FlowDirection="LeftToRight"
+    Shell.TabBarUnselectedColor="White"
+    FlyoutBackgroundColor="RoyalBlue"
+    >
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" IsEnabled="False"/>
+    </Shell.BackButtonBehavior>
+    
+    <FlyoutItem Shell.BackgroundColor="RoyalBlue" FlyoutDisplayOptions="AsMultipleItems">
+
+        <!--<ShellContent
+     Icon="https://i.imgur.com/HuxgwMX.png"
+     Title="SignUpD"
+     ContentTemplate="{DataTemplate local:SignUpPage}"
+   />-->
+
+        <ShellContent
+Icon="https://i.imgur.com/HuxgwMX.png"
+Route="DecksList"
+Title="Home"
+
+ContentTemplate="{DataTemplate local:MainPage}"
+/>
+
+        <ShellContent
+        Title="News"
+        Icon="https://i.imgur.com/L4sQLOh.png"
+        ContentTemplate="{DataTemplate mvvm:News}"
+        />
+
+       
+        
+        <ShellContent
+        Title="Decks"
+        
+        Icon="https://i.imgur.com/mzYdzL2.png"
+        ContentTemplate="{DataTemplate viewModel:DecksList}"
+        />
+        
+        <ShellContent
+        Title="Tournaments"
+        Icon="https://i.imgur.com/VnCaPwv.png"
+        ContentTemplate="{DataTemplate viewModel:TournamentsDashboard}"
+        />
+       
+
+        <!--<ShellContent
+        Title="Rankings"
+        Icon="https://i.imgur.com/xMlb9UQ.png"
+        ContentTemplate="{DataTemplate local:Leaderboard}"
+        />-->
+
+
+        <ShellContent
+        Title="Chat"
+        Icon="https://i.imgur.com/0czlZpX.png"
+        ContentTemplate="{DataTemplate mvvm:ChatHub}"
+        />
+
+        <!--<ShellContent
+        Title="Challenges"
+        Icon="https://i.imgur.com/oZTRnhQ.png"
+        ContentTemplate="{DataTemplate local:Challenges}"
+        />-->
+
+        <ShellContent
+        Title="Settings"
+        Icon="https://i.imgur.com/iQj5zh8.png"
+        ContentTemplate="{DataTemplate viewModel:UserSettings}"
+            />
+
+        <ShellContent
+        Title="About"
+        Icon="https://i.imgur.com/o9sH5W9.png"
+        ContentTemplate="{DataTemplate viewModel:About}"
+        />
+
+        <!--<ShellContent
+           Title="Sandbox"
+           ContentTemplate="{DataTemplate viewModel:NotificationsPage}"
+        />-->
+
+
+        <!--<ShellContent
+        Icon="newss"        
+        Title="News"
+        ContentTemplate="{DataTemplate viewModel:NewsFeed}"
+        />
+     
+
+        <ShellContent
+        Title="Clips"
+        Icon="clps"
+        ContentTemplate="{}"
+        />
+
+        
+        <ShellContent
+        Title="Settings"
+        FlyoutIcon="notif"
+        />
+
+      -->
+
+    </FlyoutItem>
+
+</Shell>

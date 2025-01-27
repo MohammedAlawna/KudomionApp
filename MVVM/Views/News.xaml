@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#1c1c1c"
+             FlowDirection="LeftToRight"
+             xmlns:viewModel="clr-namespace:Kudomion.MVVM.ViewModels"
+             xmlns:toolKit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="Kudomion.ViewModel.MVVM.Views.News">
+    <ContentPage.Content>
+        <RefreshView RefreshColor="RoyalBlue" Command="{Binding RefreshCommand}" VerticalOptions="FillAndExpand" x:Name="RefreshIndicator">
+        <ScrollView VerticalOptions="FillAndExpand">
+                <!--ItemsSource="{Binding NewsList}"-->
+                <CollectionView  x:Name="NewsItems">
+                <!--<CollectionView.ItemsSource>
+                 x:DataType="viewModel:NewsViewModel"
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Kudomion</x:String>
+                        <x:String>Kudomion</x:String>
+                        <x:String>Kudomion</x:String>
+                        <x:String>Kudomion</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>-->
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="7" Margin="3" Orientation="Vertical" VerticalOptions="FillAndExpand">
+                            <Border BackgroundColor="#363636" HeightRequest="450" StrokeShape="RoundRectangle 0, 0, 0, 50" Stroke="Black" StrokeThickness="2">
+
+                                <StackLayout x:Name="GetBorderParentRef" Orientation="Vertical">
+                                <StackLayout Spacing="88" VerticalOptions="Start" Orientation="Horizontal">
+                                    
+                                    <StackLayout Orientation="Horizontal">
+                                    <Image Margin="5, 7, 0, 0" Source="https://i.imgur.com/z6HDkT2.png" HeightRequest="20" VerticalOptions="Start" HorizontalOptions="Start" />
+                                    <Label Margin="5, 7, 0, 0" Text="Kudomion" HorizontalOptions="Start" VerticalOptions="Start" TextColor="White" />
+                                    </StackLayout>
+                                           
+                                            <StackLayout x:Name="LoveReactionContainer" Spacing="5" Margin="0, 3, 0, 0" Orientation="Horizontal">
+                                        <Border BackgroundColor="#1c1c1c" Stroke="Transparent" StrokeShape="RoundRectangle 10, 10, 10, 10" WidthRequest="65" HeightRequest="40">
+                                        <StackLayout Orientation="Horizontal" Spacing="3">
+                                        <Image Margin="0, 0, 0, 0" Source="https://i.imgur.com/kxrhydb.png" HeightRequest="30" WidthRequest="30" />
+                                        <Label Text="{Binding NoLoveReactions}" HorizontalOptions="Start" x:Name="NLoveReactions" HorizontalTextAlignment="Start"  TextColor="White" VerticalOptions="Center"/>
+                                        </StackLayout>
+                                                <Border.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="LoveReactionTapped"/>
+                                                </Border.GestureRecognizers>
+                                        </Border>
+
+                                        <Border BackgroundColor="#1c1c1c" Stroke="Transparent" StrokeShape="RoundRectangle 10, 10, 10, 10" WidthRequest="65" HeightRequest="40">
+                                            <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Spacing="3">
+                                                <Image Margin="2, 0, 0, 0" Source="https://i.imgur.com/mb0GUoj.png" HeightRequest="30" WidthRequest="30" />
+                                                <Label Text="{Binding NoLaughReactions}" HorizontalOptions="Start" HorizontalTextAlignment="Start" TextColor="White" VerticalOptions="Center"/>
+                                            </StackLayout>
+                                                <Border.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="LaughReactionTapped"/> 
+                                                </Border.GestureRecognizers>
+                                        </Border>
+                                        
+                                    </StackLayout>
+                                    
+                                   
+                                </StackLayout>
+
+                                    <StackLayout Spacing="2">
+                                        <Label Text="{Binding Content}" Margin="3, 0, 0, 0" TextColor="White" />
+                                        <Image Source="{Binding Psrc}" HeightRequest="280" Margin="5"/>
+                                    </StackLayout>
+
+
+
+                                </StackLayout>
+                            </Border>
+                           
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <!--<CollectionView VerticalOptions="FillAndExpand" x:Name="NewsCollectionItems" SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                    <StackLayout x:Name="NewsFeedContainer" VerticalOptions="FillAndExpand" Margin="13" Orientation="Vertical">
+                        <StackLayout x:Name="NewsCard" Orientation="Vertical">
+                            <Border BackgroundColor="#363636" Stroke="Black" HeightRequest="395">
+                                <StackLayout>
+                                    <StackLayout x:Name="NewsTopSection" Orientation="Horizontal" Spacing="85">
+                                        <StackLayout x:Name="AuthorCollection" Orientation="Horizontal" Spacing="0" HorizontalOptions="Start">
+                                            <Image HorizontalOptions="Start" VerticalOptions="Start" Margin="5" HeightRequest="35" Source="https://i.imgur.com/z6HDkT2.png" />
+                                            <Label HorizontalOptions="End" VerticalOptions="Start" Margin="0,14,0,0" VerticalTextAlignment="End" Text="Kudomion" TextColor="White" FontAttributes="Bold" FontSize="12"/>
+                                        </StackLayout>
+
+                                        <StackLayout x:Name="ReactionBtnsCollection" Spacing="4" Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Start" Margin="0, 0, 0, 0">
+                                            <Border x:Name="LoveReactionContainer" Margin="0, 5, 0, 0" WidthRequest="65" HeightRequest="31" BackgroundColor="#1c1c1c" Stroke="Transparent" HorizontalOptions="End">
+                                                <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Center">
+                                                    <Image x:Name="LoveReactionImg" Source="https://i.imgur.com/kxrhydb.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start"/>
+                                                        <Label x:Name="NumberOfLoveReactions" Text="{Binding LoveReactionsCount}" FontAttributes="Bold" FontSize="11" TextColor="White" HorizontalOptions="End" Margin="0, 6,8 ,0" HorizontalTextAlignment="End"/>
+                                                    <StackLayout.GestureRecognizers>
+                                                        <TapGestureRecognizer Command="{Binding ReactCommand}" CommandParameter="{Binding LoveReaction}"/>
+                                                    </StackLayout.GestureRecognizers>   
+                                                </StackLayout>
+
+                                                <Border.StrokeShape>
+                                                    <RoundRectangle CornerRadius="20"/>
+                                                </Border.StrokeShape>
+                                            </Border>
+
+                                            <Border x:Name="LaughReactionContainer" Margin="0, 5, 0, 0" WidthRequest="65" HeightRequest="31" BackgroundColor="#1c1c1c" Stroke="Transparent" HorizontalOptions="Start">
+                                                <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Start">
+                                                    <Image x:Name="LaughReactionImg" Source="https://i.imgur.com/mb0GUoj.png" HeightRequest="28" WidthRequest="28" HorizontalOptions="Start"/>
+                                              
+                                           <Label x:Name="NumberOfLaughReactions" Text="{Binding LaughReactionsCount}" FontAttributes="Bold" FontSize="11" TextColor="White" HorizontalOptions="End" Margin="0, 6,8 ,0" HorizontalTextAlignment="End"/>
+                                                    <StackLayout.GestureRecognizers>
+                                                            <TapGestureRecognizer Command="{Binding ReactCommand}" CommandParameter="{Binding LaughReaction}"/>
+                                                    </StackLayout.GestureRecognizers>
+                                                </StackLayout>
+
+                                                <Border.StrokeShape>
+                                                    <RoundRectangle CornerRadius="20"/>
+                                                </Border.StrokeShape>
+                                            </Border>
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                    <StackLayout Spacing="8" x:Name="PostContent" Orientation="Vertical">
+                                        <Label x:Name="PostText" FontAutoScalingEnabled="True" Text="This is the first post. YGO is the best game ever." Margin="3" TextColor="White" FontSize="10.3" />
+                                        <Image Source="https://i.imgur.com/0Ay3h8R.jpg" WidthRequest="360"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Border>
+                        </StackLayout>
+                    </StackLayout>
+                    </DataTemplate>                
+                </CollectionView.ItemTemplate>
+              
+            </CollectionView>-->
+           
+        <!--<StackLayout Margin="15">
+            <Label
+                TextColor="White"
+                FontSize="17"
+                Text="{Binding fullBindedString}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry Placeholder="Test Binding" TextColor="White" Text="{Binding TestBinding}"/>
+            <Entry Placeholder="Last Test Binding" TextColor="White" Text="{Binding LastTextBinding}"/>
+
+            <Button Text="Click Me" Command="{Binding TapCommand}" IsEnabled="{Binding IsNotBusy}"/>
+        </StackLayout>-->
+        </ScrollView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

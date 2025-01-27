@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kudomion.MainPage"
+             BackgroundColor="#1c1c1c"
+             BackgroundImageSource="https://i.imgur.com/ykZMn6g.jpg"
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"
+             xmlns:signInFeature="clr-namespace:Kudomion.Features.SignIn"
+             FlowDirection="LeftToRight"
+             xmlns:modl="clr-namespace:Kudomion.Features.SignIn"
+             Shell.NavBarIsVisible="False"
+             >
+    <!--Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"-->
+    
+    <StackLayout Padding="80" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+       
+        <Image Source="AppLogo.png" WidthRequest="180" HeightRequest="180" ></Image>
+        <!--<signInFeature:SignInFormView BindingContext="{Binding SignInFormViewModel}" />-->
+
+        <Frame x:Name="usernameFrame" WidthRequest="250" BackgroundColor="#2f3030" Padding="2" BorderColor="Black" Margin="3">
+            <Entry x:Name="userNameText" WidthRequest="220" HorizontalOptions="CenterAndExpand" FontSize="13" ReturnType="Next" Placeholder="Enter your username..." TextColor="White"  PlaceholderColor="White"/>
+        </Frame>
+
+        <Frame WidthRequest="250" x:Name="passwordFrame" BackgroundColor="#2f3030" Padding="2" BorderColor="Black"  Margin="3">
+            <Entry x:Name="passwordText" WidthRequest="220" Placeholder="Enter your password..." FontSize="13" IsPassword="True" HorizontalOptions="CenterAndExpand" ReturnType="Done" TextColor="White" PlaceholderColor="White"></Entry>
+        </Frame>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button
+                VerticalOptions="Center"
+                Text="Login"
+                WidthRequest="90"
+                TextColor="White"
+                Clicked="SignInClicked"
+                x:Name="SignInBtn"
+                Margin="5"
+                BackgroundColor="RoyalBlue" 
+                BorderWidth="1.5"
+                CornerRadius="50"></Button>
+
+        <Button
+            WidthRequest="110"
+                VerticalOptions="Center"
+                Text="Register"
+                IsEnabled="True"
+                TextColor="White"
+                Clicked="TapGestureRecognizer_Tapped"
+                BackgroundColor="#212121" 
+                BorderWidth="1.5"
+                CornerRadius="50"></Button>
+
+        </StackLayout>
+
+        <Label HorizontalOptions="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span FontSize="13" Text="Forgot Password? " TextColor="White"/>
+                    <Span FontSize="16" Text="Reset Password" TextColor="RoyalBlue" FontAttributes="Bold" TextDecorations="Underline"/>
+
+                </FormattedString>
+            </Label.FormattedText>
+
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="ForgetPasswordClicked"/>
+            </Label.GestureRecognizers>
+        </Label>
+        
+        <StackLayout Orientation="Horizontal" Margin="3" Spacing="11" HorizontalOptions="Center">
+            <Image HeightRequest="40" Source="https://i.imgur.com/D0Q71Q3.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoogleAuthTapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image HeightRequest="40" Source="https://i.imgur.com/jHAMEio.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="FacebookAuthTapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image HeightRequest="40" Source="https://i.imgur.com/NnfklmQ.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="DiscordAuthTapped" />
+                </Image.GestureRecognizers>    
+            </Image>
+        </StackLayout>
+    </StackLayout>
+    <!--<ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Welcome to .NET Multi-platform App UI"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>-->
+
+</ContentPage>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kudomion.Leaderboard"
+             xmlns:local="clr-namespace:Kudomion.MVVM.ViewModels"
+             FlowDirection="LeftToRight"
+             BackgroundColor="#202024">
+
+    <RefreshView x:Name="RefreshIndicator" RefreshColor="RoyalBlue" Command="{Binding RefreshCommand}" VerticalOptions="FillAndExpand">
+    <ScrollView Margin="10" VerticalOptions="FillAndExpand">
+
+            <StackLayout>
+                <StackLayout WidthRequest="350">
+                    <Border Stroke="Black" BackgroundColor="#2c2c2c" HeightRequest="85" Margin="10">
+                        <Image WidthRequest="270" HeightRequest="55" Source="https://i.imgur.com/1CGc4Nw.png"/>
+                    </Border>
+                </StackLayout>
+
+                <StackLayout x:Name="allUsersRank" WidthRequest="330">
+                    <Border WidthRequest="330" Stroke="Black" Margin="10" BackgroundColor="#2c2c2c" x:Name="leaderboardCard">
+                        <ScrollView Margin="10">
+                            <CollectionView HeightRequest="330" x:Name="userRankingsToLoad">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+
+                                        <Border Margin="5" Stroke="Black" HeightRequest="100" BackgroundColor="#7C0000">
+                                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="15" Orientation="Horizontal">
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                                </StackLayout.GestureRecognizers>
+                                                <!--<Grid Padding="3">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition/>
+                                                    <RowDefinition/>
+                                                </Grid.RowDefinitions>
+
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                    
+                                                </Grid.ColumnDefinitions>-->
+
+
+                                                <Image Source="https://i.imgur.com/V6qInWz.png" HeightRequest="55" HorizontalOptions="Start" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" />
+                                                <Label Text="{Binding name}" Margin="0,16,0,0" HorizontalTextAlignment="Start" TextColor="White" FontSize="13" FontAttributes="Bold" Grid.Column="1" Grid.Row="0">
+                                                    <Label.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="UsernameClicked" />
+                                                    </Label.GestureRecognizers>
+                                                </Label>
+
+                                                <Label Text="" HorizontalTextAlignment="Start" VerticalTextAlignment="End" TextColor="White" FontSize="16" FontAttributes="Bold" Grid.Column="1" Grid.Row="1"/>
+                                                <Label Text="{Binding points}" x:Name="rnk" TextColor="Gold" FontSize="18" FontAttributes="Bold" Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Margin="0" HorizontalTextAlignment="End" VerticalOptions="CenterAndExpand"/>
+
+
+                                                <!--</Grid>-->
+                                            </StackLayout>
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="25" />
+                                            </Border.StrokeShape>
+                                        </Border>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </ScrollView>
+
+                    </Border>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </RefreshView>
+</ContentPage>

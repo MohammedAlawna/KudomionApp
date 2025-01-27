@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#1c1c1c"
+             FlowDirection="LeftToRight"
+             x:Class="Kudomion.ViewModel.DecksList">
+    <ContentPage.Content>
+        <RefreshView x:Name="RefreshIndicator" Command="{Binding RefreshCommand}" RefreshColor="RoyalBlue" VerticalOptions="FillAndExpand">
+        <ScrollView FlowDirection="LeftToRight" Margin="20" VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <Button Margin="5" TextColor="White" BackgroundColor="RoyalBlue" WidthRequest="270" Text="Tier List" FontSize="17" Clicked="OpenTierList"/>
+                <StackLayout>
+                    <StackLayout>
+                        <StackLayout x:Name="DeckItemCard">
+                            <CollectionView VerticalOptions="FillAndExpand" x:Name="decksToLoad">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border BackgroundColor="#363636" Stroke="Black" WidthRequest="270" HeightRequest="350">
+                                            <StackLayout VerticalOptions="Center">
+                                                <Label x:Name="DeckTittle" Text="{Binding title}" FontSize="14" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Center"/>
+                                                <Image x:Name="DeckThumb" Margin="10" Source="{Binding thumbSrc}" HeightRequest="130"/>
+                                                <StackLayout x:Name="DeckItemButtons" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                                                    <Button Clicked="DownloadDeckBtn_Clicked" Margin="3" FontSize="12" Text="Download .YDK" TextColor="White" BackgroundColor="RoyalBlue" WidthRequest="130" />
+                                                    <Button Clicked="GetYDKE" Text="YDKE" Margin="3" FontSize="12" TextColor="White" BackgroundColor="DarkOrange" WidthRequest="130" />
+                                                    <Button Clicked="ViewDeckDetails" Text="View" Margin="3" FontSize="12" TextColor="White" BackgroundColor="Gold" WidthRequest="130" />
+
+                                                    <!--<Button Text="YDKe" BackgroundColor="DarkGoldenrod" WidthRequest="70" />-->
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <Border.StrokeShape>
+
+                                                <RoundRectangle CornerRadius="20" />
+                                            </Border.StrokeShape>
+                                        </Border>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

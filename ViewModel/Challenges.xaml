@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kudomion.Challenges"
+             FlowDirection="LeftToRight"
+             BackgroundColor="#202024"
+             >
+    <ScrollView Margin="10" VerticalOptions="CenterAndExpand" FlowDirection="LeftToRight">
+        <StackLayout FlowDirection="LeftToRight">
+            <StackLayout>
+            <Border Margin="15" Stroke="Black" BackgroundColor="#2c2c2c" HeightRequest="240" WidthRequest="340">
+            <StackLayout Margin="16">
+            <Label Text="Please Choose Your Opponent Name" TextColor="Wheat" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" FontSize="12" FontAttributes="Bold"/>
+            <SearchBar x:Name="p1" Margin="3" HeightRequest="40" Grid.Row="1" Grid.Column="0" TextColor="White" CancelButtonColor="White" PlaceholderColor="White" BackgroundColor="RoyalBlue" Grid.ColumnSpan="3" FontSize="11" Placeholder="Your Username will be assigned here."/>
+            <Label Text="V.S" Margin="2" TextColor="RoyalBlue" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" FontSize="17" FontAttributes="Bold"/>
+            <Picker VerticalTextAlignment="Center" FontSize="11" HorizontalTextAlignment="Center" x:Name="p2" Title="Click Here To Choose Your Opponent.." TitleColor="White" BackgroundColor="#CA6F1E" ItemDisplayBinding="{Binding name}" Margin="3" TextColor="White"/>
+            <StackLayout Spacing="5" Margin="5" Orientation="Horizontal" HorizontalOptions="Start">
+             <Button  Text="Reset" TextColor="White" Clicked="Reset_Clicked" BackgroundColor="RoyalBlue" />
+             <Button  Text="Create" TextColor="White" Clicked="CreateRoom_Clicked" BackgroundColor="#CA6F1E" />
+            </StackLayout>
+
+                        <!--<Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        </Grid.RowDefinitions>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Please Choose Your Opponent Name" Grid.ColumnSpan="3" TextColor="Wheat" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold"/>
+                    <SearchBar x:Name="p1" HeightRequest="40" Grid.Row="1" Grid.Column="0" TextColor="White" CancelButtonColor="White" PlaceholderColor="White" BackgroundColor="RoyalBlue" Grid.ColumnSpan="3" Placeholder="Your UserName will be assigned here."/>
+                    <Label Text="V.S" Grid.Row="2" Margin="15" Grid.ColumnSpan="3" TextColor="RoyalBlue" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold"/>
+                    <Picker HeightRequest="40" x:Name="p2" Title="Choose Your Opponent.." TitleColor="White" BackgroundColor="#CA6F1E" ItemDisplayBinding="{Binding name}" Grid.Row="3" Grid.ColumnSpan="3" Grid.Column="0" Margin="0" TextColor="White"/>
+                    <Button Grid.Row="5" HeightRequest="40" WidthRequest="40" Grid.Column="1" Text="Reset" TextColor="White" Clicked="Reset_Clicked" BackgroundColor="RoyalBlue" />
+                    <Button Grid.Row="5" Grid.Column="2" Text="Create" TextColor="White" Clicked="CreateRoom_Clicked" BackgroundColor="#CA6F1E" />
+                     
+                    </Grid>-->
+
+                    </StackLayout>
+                </Border>
+            
+        </StackLayout>
+
+            <StackLayout x:Name="roomsInLobby">
+            <Border  BackgroundColor="#1c1c1c" HeightRequest="240" WidthRequest="340" Stroke="#c9900a" x:Name="lobbyCard">
+                    <StackLayout Margin="10">
+                    <CollectionView HeightRequest="200" x:Name="roomsCollectionView">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout>
+                                    <Border Stroke="#000" BackgroundColor="RoyalBlue" HeightRequest="120" WidthRequest="295" HorizontalOptions="CenterAndExpand">
+                                            <StackLayout Margin="5" VerticalOptions="Center" WidthRequest="205" HorizontalOptions="CenterAndExpand">
+                                                <Grid Padding="5">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition/>
+                                                        <RowDefinition/>
+                                                    </Grid.RowDefinitions>
+
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition/>
+                                                        <ColumnDefinition/>
+                                                        <ColumnDefinition/>
+                                                    </Grid.ColumnDefinitions>
+
+
+                                                    <Label Text="{Binding p1}" FontAttributes="Bold" Grid.Column="0" FontSize="15" HorizontalTextAlignment="Center" TextColor="White"/>
+                                                    <Image Source="https://i.imgur.com/1DH8AL2.png" WidthRequest="25" HeightRequest="25" Grid.Column="1" Grid.Row="0"/>
+                                                    <!--<Label Text="V.S" TextColor="Gold" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="0"/>-->
+                                                    <Label x:Name="pLobby" Text="{Binding p2}" Grid.Column="2" FontAttributes="Bold" FontSize="15" HorizontalTextAlignment="Center" TextColor="White"/>
+
+                                                    <Button Margin="7" Text="Admit Defeat" x:Name="{Binding Id}" WidthRequest="130" Clicked="AdmitDefeat_Clicked" FontAttributes="Bold" TextColor="White" FontSize="14" BackgroundColor="#CA6F1E" HeightRequest="50" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"  />
+
+
+                                                </Grid>
+                                            </StackLayout>
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="33" />
+                                            </Border.StrokeShape>
+                                        </Border>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </StackLayout>
+                </Border>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+
+</ContentPage>
