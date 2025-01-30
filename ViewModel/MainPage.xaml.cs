@@ -16,7 +16,7 @@ using Firebase.Auth;
 namespace Kudomion;
 public partial class MainPage : ContentPage
 {
-    //private readonly FirebaseAuthProvider authProvider;
+    public FirebaseAuthProvider authProvider;
 
     //FirebaseAuthProvider authProvider;
     public static string currentLoggedInUser;
@@ -34,7 +34,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         NavigationPage.SetHasBackButton(this, false);
-       // authProvider = new FirebaseAuthProvider(new FirebaseConfig);
+        authProvider = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyAaahksGmC2M1IpC2gKmIY0DBIQcBqZInA"));
 
         oneDayTimer.Start();
         oneDayTimer.Elapsed += OnTimedEvent;
@@ -61,7 +61,7 @@ public partial class MainPage : ContentPage
             string email = await DisplayPromptAsync("Password Recovery", "Please enter the email you already used to create your account?");
 
             //Console.WriteLine("Entered Prompt: " + email); => Tested and Debugged: is working.
-            await firebase.authProvider.SendPasswordResetEmailAsync(email);
+            await authProvider.SendPasswordResetEmailAsync(email);
 
             //Alert Success Message:
             await DisplayAlert("Password Reset Link!", "Password-reset email was sent. Please check your email.", "OK!");
@@ -78,17 +78,50 @@ public partial class MainPage : ContentPage
         Navigation.PushAsync(new UserProfile(username));
     }
 
+    //This method is used to login (Only for verified accounts).
+    //If verified, you'll login and create user (duelists) custom profile.
+    //If not verified, you'll get a prompt to verify your account.
+    async void SignInWithVerification(object sender, EventArgs e)
+    {
+        try
+        {
+            //1- Check if UserVerified (By Email Verify Link):
+            var loggedInAuthLink =  await authProvider.SignInWithEmailAndPasswordAsync(emailEntry.Text, passwordText.Text);
+            
 
+            //2- Implicitly Reload/Refresh FirebaseAuthed User by Forcing The Token Refresh:
+            var tokenRefresh = await loggedInAuthLink.GetFreshAuthAsync();
+
+            Console.WriteLine("Was Email Verified: " + loggedInAuthLink.User.IsEmailVerified);
+
+          /*     if (tokenRefresh.User.IsEmailVerified)
+               {
+                await DisplayAlert("Success","VERIF: true!", "OK!");
+               }*/ 
+
+            //Debugging Line for Email Verif:
+
+            //If Verified, add to users db, if not, don't add:
+
+
+        }
+        catch(Exception ex)
+        {
+           await DisplayAlert("Error!", "An error just occured. Please Contact Developer. " + ex.Message , "OK!");
+        }
+    }
+
+    /*                PRE-ALPHA RELEASE
     private async void SignInClicked(object sender, EventArgs e)
     {
         try
         {
-            currentLoggedInUser = userNameText.Text;
+           currentLoggedInUser = userNameText.Text;
             UserModel outPut = await firebase.GetUserByName(currentLoggedInUser);
             //Console.WriteLine("This OUTPUT!!" + outPut.name + " -- Lowered Case: " + outPut.name.ToLower() + ",  --" + userNameText.Text.ToLower());
             currentUser = outPut;
             //Case Insensitive Strings
-            string loweredCaseName = userNameText.Text.ToLower().ToString();
+           string loweredCaseName = userNameText.Text.ToLower().ToString();
             string loweredCaseNameDB = outPut.name.ToLower().ToString();
 
             //Case Insensitive Check using => string.Equals()
@@ -110,7 +143,7 @@ public partial class MainPage : ContentPage
                 currentUser = new UserModel() {
                     name = currentUser.name,
                     duels = currentUser.duels,
-                    /*NumberOfPosts = currentUser.NumberOfPosts,*/
+                    //NumberOfPosts = currentUser.NumberOfPosts,
                     Id = currentUser.Id,
                     password = currentUser.password,
                     points = currentUser.points,
@@ -146,7 +179,7 @@ public partial class MainPage : ContentPage
             return;
         }
 
-    }
+    }*/
 
 
     private void TapGestureRecognizer_Tapped(object sender, EventArgs e)

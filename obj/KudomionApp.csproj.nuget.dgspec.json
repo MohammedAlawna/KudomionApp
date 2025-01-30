@@ -74,6 +74,10 @@
               "target": "Package",
               "version": "[8.2.0, )"
             },
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "FirebaseAuthentication.net": {
               "target": "Package",
               "version": "[3.4.0, )"
@@ -132,6 +136,10 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.0, )"
+            },
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             },
             "FirebaseAuthentication.net": {
               "target": "Package",
@@ -192,6 +200,10 @@
               "target": "Package",
               "version": "[8.2.0, )"
             },
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "FirebaseAuthentication.net": {
               "target": "Package",
               "version": "[3.4.0, )"
@@ -251,6 +263,10 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.0, )"
+            },
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             },
             "FirebaseAuthentication.net": {
               "target": "Package",

@@ -15,17 +15,11 @@ namespace Kudomion.FirebaseManager
     public class FirebaseHelper
     {
 
-        public FirebaseAuthProvider authProvider;
-
+       
         public FirebaseClient firebaseClient = new FirebaseClient("https://kudo1-38995-default-rtdb.firebaseio.com/");
         public static FirebaseClient GlobalFBClient = new FirebaseClient("https://kudo1-38995-default-rtdb.firebaseio.com/");
         
-        public FirebaseHelper()
-        {
-            authProvider = new FirebaseAuthProvider(
-                new FirebaseConfig("AIzaSyAaahksGmC2M1IpC2gKmIY0DBIQcBqZInA"));
-        }
-        
+    
         //Tournament Manager:
         //Get All Tournaments in DB.
         public async Task<List<Tournament>> GetAllTournaments()
@@ -267,12 +261,15 @@ namespace Kudomion.FirebaseManager
 
 
         }
+
+     
              
-        public async Task<bool> AddUser(string _name, string _password)
+        //Passwords are securely saved within the FirebaseAuth system
+        public async Task<bool> AddUser(string _name/*, string _password*/, string uID)
         {
             try
             {
-                await firebaseClient.Child("Users").PostAsync(new UserModel() { name = _name, password = _password, points = 0, posts = 0, ranking = 0, usertype = "USER", status = "OFFLINE", JoinedAt = DateTime.Today.ToString(),
+                await firebaseClient.Child("Users").PostAsync(new UserModel() { name = _name/*, password = _password*/, Id = uID ,isVerified = false , points = 0, posts = 0, ranking = 0, usertype = "USER", status = "OFFLINE", JoinedAt = DateTime.Today.ToString(),
                     friendRequests = new List<UserModel>() /*{ new UserModel { name="dummyUser"} }*/  , blockedList = new List<UserModel>() { new UserModel {name="dummyUser" } }, friendsList = new List<UserModel>() { new UserModel { name = "dummyUser" } }
                 });
                 return true;

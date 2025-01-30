@@ -20,7 +20,7 @@
         <!--<signInFeature:SignInFormView BindingContext="{Binding SignInFormViewModel}" />-->
 
         <Frame x:Name="usernameFrame" WidthRequest="250" BackgroundColor="#2f3030" Padding="2" BorderColor="Black" Margin="3">
-            <Entry x:Name="userNameText" WidthRequest="220" HorizontalOptions="CenterAndExpand" FontSize="13" ReturnType="Next" Placeholder="Enter your username..." TextColor="White"  PlaceholderColor="White"/>
+            <Entry x:Name="emailEntry" WidthRequest="220" HorizontalOptions="CenterAndExpand" FontSize="13" ReturnType="Next" Placeholder="Enter your email..." TextColor="White"  PlaceholderColor="White"/>
         </Frame>
 
         <Frame WidthRequest="250" x:Name="passwordFrame" BackgroundColor="#2f3030" Padding="2" BorderColor="Black"  Margin="3">
@@ -32,7 +32,7 @@
                 Text="Login"
                 WidthRequest="90"
                 TextColor="White"
-                Clicked="SignInClicked"
+                Clicked="SignInWithVerification"
                 x:Name="SignInBtn"
                 Margin="5"
                 BackgroundColor="RoyalBlue" 

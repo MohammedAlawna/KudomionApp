@@ -6,10 +6,11 @@ namespace Kudomion.Model
 {
     public class UserModel
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string name { get; set; }
         public string status { get; set; }
         public string JoinedAt { get; set; }
+        public bool isVerified { get; set; }
 
         public List<UserModel> friendsList { get; set; }
         public List<UserModel> blockedList { get; set; }
