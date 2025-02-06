@@ -36,6 +36,55 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		<AndroidSigningKeyStore>kdmn.keystore</AndroidSigningKeyStore>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|AnyCPU'">
+	  <ApplicationTitle>Kudomion</ApplicationTitle>
+	  <ApplicationId>com.blouza.kudomion</ApplicationId>
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>123456789</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>mohammed</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>123456789</AndroidSigningKeyPass>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
+	  <ApplicationTitle>Kudomion</ApplicationTitle>
+	  <ApplicationId>com.blouza.kudomion</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-maccatalyst|AnyCPU'">
+	  <ApplicationTitle>Kudomion</ApplicationTitle>
+	  <ApplicationId>com.blouza.kudomion</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-windows10.0.19041.0|AnyCPU'">
+	  <ApplicationTitle>Kudomion</ApplicationTitle>
+	  <ApplicationId>com.blouza.kudomion</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-android|AnyCPU'">
+	  <ApplicationTitle>Kudomion</ApplicationTitle>
+	  <ApplicationId>com.blouza.kudomion</ApplicationId>
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>123456789</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>mohammed</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>123456789</AndroidSigningKeyPass>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-ios|AnyCPU'">
+	  <ApplicationTitle>Kudomion</ApplicationTitle>
+	  <ApplicationId>com.blouza.kudomion</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-maccatalyst|AnyCPU'">
+	  <ApplicationTitle>Kudomion</ApplicationTitle>
+	  <ApplicationId>com.blouza.kudomion</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-windows10.0.19041.0|AnyCPU'">
+	  <ApplicationTitle>Kudomion</ApplicationTitle>
+	  <ApplicationId>com.blouza.kudomion</ApplicationId>
 	</PropertyGroup>
 
 	<ItemGroup>

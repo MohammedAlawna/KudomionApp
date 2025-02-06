@@ -1,0 +1,197 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = KudomionApp
+build_property.ProjectDir = E:\ToGloryProjects\KudomionGit\KudomionApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/Features/SignIn/SignInFormView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.Features.SignIn.SignInFormView.xaml
+build_metadata.AdditionalFiles.TargetPath = Features\SignIn\SignInFormView.xaml
+build_metadata.AdditionalFiles.RelativePath = Features\SignIn\SignInFormView.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/Features/SignUp/SignUpFormView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.Features.SignUp.SignUpFormView.xaml
+build_metadata.AdditionalFiles.TargetPath = Features\SignUp\SignUpFormView.xaml
+build_metadata.AdditionalFiles.RelativePath = Features\SignUp\SignUpFormView.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/MVVM/Views/ChatHub.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.MVVM.Views.ChatHub.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\ChatHub.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\ChatHub.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/MVVM/Views/ConsumableWebView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.MVVM.Views.ConsumableWebView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\ConsumableWebView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\ConsumableWebView.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/MVVM/Views/MultiplePageContainer.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.MVVM.Views.MultiplePageContainer.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\MultiplePageContainer.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\MultiplePageContainer.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/MVVM/Views/News.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.MVVM.Views.News.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\News.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\News.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/About.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.About.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\About.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\About.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/Challenges.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.Challenges.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\Challenges.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\Challenges.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/DecksList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.DecksList.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\DecksList.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\DecksList.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/Leaderboard.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.Leaderboard.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\Leaderboard.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\Leaderboard.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\LoginPage.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\MainPage.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/NewsFeed.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.NewsFeed.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\NewsFeed.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\NewsFeed.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/NotificationsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.NotificationsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\NotificationsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\NotificationsPage.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/SignUpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.SignUpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\SignUpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\SignUpPage.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/SimpleChat.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.SimpleChat.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\SimpleChat.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\SimpleChat.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/TierList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.TierList.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\TierList.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\TierList.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/TournamentBracket.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.TournamentBracket.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\TournamentBracket.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\TournamentBracket.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/TournamentDetails.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.TournamentDetails.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\TournamentDetails.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\TournamentDetails.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/TournamentInfo.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.TournamentInfo.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\TournamentInfo.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\TournamentInfo.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/TournamentsDashboard.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.TournamentsDashboard.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\TournamentsDashboard.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\TournamentsDashboard.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/TournamentSignUpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.TournamentSignUpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\TournamentSignUpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\TournamentSignUpPage.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/UserProfile.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.UserProfile.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\UserProfile.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\UserProfile.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/UserSettings.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.UserSettings.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\UserSettings.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\UserSettings.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/UsersPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.UsersPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewModel\UsersPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewModel\UsersPage.xaml

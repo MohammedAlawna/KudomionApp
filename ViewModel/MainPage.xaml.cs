@@ -87,17 +87,28 @@ public partial class MainPage : ContentPage
         {
             //1- Check if UserVerified (By Email Verify Link):
             var loggedInAuthLink =  await authProvider.SignInWithEmailAndPasswordAsync(emailEntry.Text, passwordText.Text);
-            
 
+            await loggedInAuthLink.RefreshUserDetails();
             //2- Implicitly Reload/Refresh FirebaseAuthed User by Forcing The Token Refresh:
             var tokenRefresh = await loggedInAuthLink.GetFreshAuthAsync();
 
+            if (!loggedInAuthLink.User.IsEmailVerified)
+            {
+                //Prompt Activation needed, and give option to send verif email:
+                await DisplayAlert("Test: User Status", "User Account is not activated! Please Check for Verification Email.", "OK!");
+
+            }
+            else if (loggedInAuthLink.User.IsEmailVerified == true)
+            {
+                //Process Normal Login:
+                await DisplayAlert("Test: User Status", "User Account Is Activated: You'll be logged-in to system", "OK!");
+            }
             Console.WriteLine("Was Email Verified: " + loggedInAuthLink.User.IsEmailVerified);
 
-          /*     if (tokenRefresh.User.IsEmailVerified)
-               {
-                await DisplayAlert("Success","VERIF: true!", "OK!");
-               }*/ 
+             // if (tokenRefresh.User.IsEmailVerified)
+               //{
+                //await DisplayAlert("Success","VERIF: true!", "OK!");
+               //} 
 
             //Debugging Line for Email Verif:
 
@@ -111,8 +122,8 @@ public partial class MainPage : ContentPage
         }
     }
 
-    /*                PRE-ALPHA RELEASE
-    private async void SignInClicked(object sender, EventArgs e)
+    /*                PRE-ALPHA RELEASE*/
+  /*  private async void SignInClicked(object sender, EventArgs e)
     {
         try
         {
