@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using Firebase.Auth;
+using System.Diagnostics;
 
 namespace Kudomion;
 public partial class MainPage : ContentPage
@@ -88,20 +89,37 @@ public partial class MainPage : ContentPage
             //1- Check if UserVerified (By Email Verify Link):
             var loggedInAuthLink =  await authProvider.SignInWithEmailAndPasswordAsync(emailEntry.Text, passwordText.Text);
 
+
+            //2- Implicitly Reload/Refresh FirebaseAuthed User by Forcing The Token Refresh and Refreshing UserDetails:
             await loggedInAuthLink.RefreshUserDetails();
-            //2- Implicitly Reload/Refresh FirebaseAuthed User by Forcing The Token Refresh:
             var tokenRefresh = await loggedInAuthLink.GetFreshAuthAsync();
+
+            //Get FirebaseToken:
+            var authToken = loggedInAuthLink.FirebaseToken;
+
+            //Store The Token in SecureStorage:
+            if (!string.IsNullOrEmpty(authToken))
+            {
+                await SecureStorage.SetAsync("auth_token", authToken);
+            }
 
             if (!loggedInAuthLink.User.IsEmailVerified)
             {
-                //Prompt Activation needed, and give option to send verif email:
-                await DisplayAlert("Test: User Status", "User Account is not activated! Please Check for Verification Email.", "OK!");
+                //Prompt Activation needed, and give option to send verify email:
+                //TESTED: Working.  await DisplayAlert("Test: User Status", "User Account is not activated! Please Check for Verification Email.", "OK!");
 
             }
             else if (loggedInAuthLink.User.IsEmailVerified == true)
             {
                 //Process Normal Login:
-                await DisplayAlert("Test: User Status", "User Account Is Activated: You'll be logged-in to system", "OK!");
+                // TESTED: Working  await DisplayAlert("Test: User Status", "User Account Is Activated: You'll be logged-in to system", "OK!");
+                SignInBtn.IsEnabled = false;
+                currentLoggedInUser = loggedInAuthLink.User.DisplayName;
+                await Navigation.PushAsync(new LoginPage(loggedInAuthLink.User.DisplayName));
+                
+                //Tested: Debug.WriteLine("Current Username: " + currentLoggedInUser);
+                
+
             }
             Console.WriteLine("Was Email Verified: " + loggedInAuthLink.User.IsEmailVerified);
 
@@ -121,6 +139,7 @@ public partial class MainPage : ContentPage
            await DisplayAlert("Error!", "An error just occured. Please Contact Developer. " + ex.Message , "OK!");
         }
     }
+
 
     /*                PRE-ALPHA RELEASE*/
   /*  private async void SignInClicked(object sender, EventArgs e)

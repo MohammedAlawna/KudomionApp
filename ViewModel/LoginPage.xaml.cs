@@ -18,8 +18,7 @@ using System.Runtime.CompilerServices;
 using Kudomion.MVVM.Models;
 using Kudomion.MVVM.ViewModels;
 using Kudomion.MVVM.Views;
-
-
+using Firebase.Auth;
 
 /*using Android.Text;
 using Microsoft.Maui.Controls.Compatibility.Platform.Android;*/
@@ -31,6 +30,7 @@ namespace Kudomion
     {
         //Carousel List<View> (For Binding).
         List<EventsCarouselModel> eventsList { get; set; } = new List<EventsCarouselModel>();
+        MainPage mainPage = new MainPage();
 
         List<Tournament> AllTournamentsInDB;
         //Firebase Plugin Parameters..
@@ -176,17 +176,19 @@ namespace Kudomion
             try
             {
                 //Get CurrentLoggedInUser Info.
-                currentLoggedInUserName = MainPage.currentUser.name;
-
+                currentLoggedInUserName = MainPage.currentLoggedInUser;
+                
 
                 //Get User Stats.
                 var AllUsers = await firebase.GetAllUsers();
                 int UsersCount = AllUsers.Count;
                 var getCurrentUser = await firebase.GetUserByName(currentLoggedInUserName);
 
+                Debug.WriteLine("Current Username: " + getCurrentUser.name + ", uID: " + getCurrentUser.Id);
+
                 loggedInUser.Text = "Welcome, " + currentLoggedInUserName;
-                usrPoints.Text = "Points: " + getCurrentUser.points;
-                usrRank.Text = "Rank: " + getCurrentUser.ranking;
+                 usrPoints.Text = "Points: " + getCurrentUser.points;
+                 usrRank.Text = "Rank: " + getCurrentUser.ranking;
 
                 //Get Last Registered User.
                 var lastRegistered = AllUsers.LastOrDefault().name;
@@ -278,44 +280,50 @@ namespace Kudomion
 
         private async void Logout_Tapped(object sender, EventArgs e)
         {
-            try {
-                //1- Change currentLoggedIn User status to Offline:
-                var tempUsrRef = MainPage.currentUser;
-                tempUsrRef = new UserModel {
-                    name = MainPage.currentUser.name,
-                    duels = MainPage.currentUser.duels,
-                    /*NumberOfPosts = currentUser.NumberOfPosts,*/
-                    Id = MainPage.currentUser.Id,
-                    password = MainPage.currentUser.password,
-                    points = MainPage.currentUser.points,
-                    posts = MainPage.currentUser.posts,
-                    ranking = MainPage.currentUser.ranking,
-                    usertype = MainPage.currentUser.usertype,
-                    friendRequests = MainPage.currentUser.friendRequests,
-                    blockedList = MainPage.currentUser.blockedList,
-                    friendsList = MainPage.currentUser.friendsList,
-                    JoinedAt = MainPage.currentUser.JoinedAt,
-                    status = "OFFLINE"
-                    /*TODO: Last Seen and other info*/
-                };
 
-                
-                await firebase.UpdateUser(MainPage.currentLoggedInUser, tempUsrRef);
-                /*NOTICE:: For a more advanced system of Online/Offline System
-                please refer to the AppLifeCycle in .NET MAUI official documentation.*/
+            SecureStorage.Remove("auth_token");
 
-                //2- Clear Login Credentiatals:
-                MainPage.currentLoggedInUser = string.Empty;
+            MainPage.currentLoggedInUser = string.Empty;
             MainPage.loggedIn = false;
-            MainPage.currentUser = null;
             await Navigation.PushAsync(new MainPage());
-            }
-            catch (Exception ex)
+            //mainAuthProvider.authProvider.
+
+            /*    try {
+                    //1- Change currentLoggedIn User status to Offline:
+                    var tempUsrRef = MainPage.currentUser;
+                    tempUsrRef = new UserModel {
+                        name = MainPage.currentUser.name,
+                        duels = MainPage.currentUser.duels,
+                        //NumberOfPosts = currentUser.NumberOfPosts,
+                        Id = MainPage.currentUser.Id,
+                        password = MainPage.currentUser.password,
+                        points = MainPage.currentUser.points,
+                        posts = MainPage.currentUser.posts,
+                        ranking = MainPage.currentUser.ranking,
+                        usertype = MainPage.currentUser.usertype,
+                        friendRequests = MainPage.currentUser.friendRequests,
+                        blockedList = MainPage.currentUser.blockedList,
+                        friendsList = MainPage.currentUser.friendsList,
+                        JoinedAt = MainPage.currentUser.JoinedAt,
+                        status = "OFFLINE"
+                        //TODO: Last Seen and other info
+                    };*/
+
+
+            //    await firebase.UpdateUser(MainPage.currentLoggedInUser, tempUsrRef);
+            /*NOTICE:: For a more advanced system of Online/Offline System
+            please refer to the AppLifeCycle in .NET MAUI official documentation.*/
+
+            //2- Clear Login Credentiatals:
+
+            //  MainPage.currentUser = null;
+
+        }
+          /*  catch (Exception ex)
             {
                await DisplayAlert("Unexpected Error", $"Error, please contact developer.{ex}", "OK!");
-            }
+            }*/
             
         }
 
     }
-}

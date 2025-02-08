@@ -66,10 +66,9 @@ namespace Kudomion
 
                 //Register User in RealTime DB (UserModel):
                 await firebase.AddUser(userName.Text, userID.LocalId);
-                
 
                 //DisplayAlert:
-                await DisplayAlert("Welcome! One More Step..", "A verification email was sent. Please Check your email inbox.", "OK!");
+                await DisplayAlert("Welcome!", "A verification email was sent. Please Check your email inbox.", "OK!");
 
                 //Reset Values:
                 userName.Text = string.Empty;
