@@ -8,7 +8,7 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
-    <PackageIdentityName>com.companyname.kudomionapp</PackageIdentityName>
+    <PackageIdentityName>com.blouza.kudomion</PackageIdentityName>
     <PackageIdentityPublisher>CN=User Name</PackageIdentityPublisher>
     <IntermediateOutputPath>E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
@@ -61,42 +61,6 @@
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ykjblog.scale-100.png">
-      <PackagePath>ykjblog.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ygb.scale-100.jpg">
-      <PackagePath>ygb.scale-100.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\prf.scale-100.png">
-      <PackagePath>prf.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\notif.scale-100.png">
-      <PackagePath>notif.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\emj.scale-100.png">
-      <PackagePath>emj.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dscrd.scale-100.png">
-      <PackagePath>dscrd.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\chtbtn.scale-100.png">
-      <PackagePath>chtbtn.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\yg.scale-100.png">
-      <PackagePath>yg.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\splsh.scale-100.jpg">
-      <PackagePath>splsh.scale-100.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ranking.scale-100.png">
-      <PackagePath>ranking.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\fbk.scale-100.png">
-      <PackagePath>fbk.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\btle.scale-100.png">
-      <PackagePath>btle.scale-100.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
     </AppxPackagedFile>
@@ -111,6 +75,36 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\btlebtn.scale-100.png">
+      <PackagePath>btlebtn.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ytb.scale-100.png">
+      <PackagePath>ytb.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ykjptm.scale-100.png">
+      <PackagePath>ykjptm.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ygb.scale-100.jpg">
+      <PackagePath>ygb.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\yg.scale-100.png">
+      <PackagePath>yg.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\splsh.scale-100.jpg">
+      <PackagePath>splsh.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ranking.scale-100.png">
+      <PackagePath>ranking.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\fbk.scale-100.png">
+      <PackagePath>fbk.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dscrd.scale-100.png">
+      <PackagePath>dscrd.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\chtbtn.scale-100.png">
+      <PackagePath>chtbtn.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
@@ -250,20 +244,26 @@
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ytb.scale-100.png">
-      <PackagePath>ytb.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ykjptm.scale-100.png">
-      <PackagePath>ykjptm.scale-100.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ykjoma.scale-100.png">
       <PackagePath>ykjoma.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ykjblog.scale-100.png">
+      <PackagePath>ykjblog.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\prfle.scale-100.png">
       <PackagePath>prfle.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\btlebtn.scale-100.png">
-      <PackagePath>btlebtn.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\prf.scale-100.png">
+      <PackagePath>prf.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\notif.scale-100.png">
+      <PackagePath>notif.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\emj.scale-100.png">
+      <PackagePath>emj.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\btle.scale-100.png">
+      <PackagePath>btle.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\KudomionApp.deps.json">
       <PackagePath>KudomionApp.deps.json</PackagePath>

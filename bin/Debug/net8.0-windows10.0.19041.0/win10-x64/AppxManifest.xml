@@ -7,10 +7,10 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="com.companyname.kudomionapp" Publisher="CN=User Name" Version="1.0.0.1" ProcessorArchitecture="x64" />
+  <Identity Name="com.blouza.kudomion" Publisher="CN=User Name" Version="1.0.0.1" ProcessorArchitecture="x64" />
   <mp:PhoneIdentity PhoneProductId="EB3C575F-E0A2-4039-A2B9-731F53698770" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>KudomionApp</DisplayName>
+    <DisplayName>Kudomion</DisplayName>
     <PublisherDisplayName>User Name</PublisherDisplayName>
     <Logo>appiconStoreLogo.png</Logo>
   </Properties>
@@ -24,8 +24,8 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="KudomionApp.exe" EntryPoint="Windows.FullTrustApplication">
-      <uap:VisualElements DisplayName="KudomionApp" Description="KudomionApp" Square150x150Logo="appiconMediumTile.png" Square44x44Logo="appiconLogo.png" BackgroundColor="transparent">
-        <uap:DefaultTile Square71x71Logo="appiconSmallTile.png" Wide310x150Logo="appiconWideTile.png" Square310x310Logo="appiconLargeTile.png" ShortName="KudomionApp">
+      <uap:VisualElements DisplayName="Kudomion" Description="Kudomion" Square150x150Logo="appiconMediumTile.png" Square44x44Logo="appiconLogo.png" BackgroundColor="transparent">
+        <uap:DefaultTile Square71x71Logo="appiconSmallTile.png" Wide310x150Logo="appiconWideTile.png" Square310x310Logo="appiconLargeTile.png" ShortName="Kudomion">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />
             <uap:ShowOn Tile="wide310x150Logo" />
