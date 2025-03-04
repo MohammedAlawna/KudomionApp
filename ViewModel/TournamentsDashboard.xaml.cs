@@ -129,7 +129,7 @@ public partial class TournamentsDashboard : ContentPage
 			}
 
 			//Check if RegisteredUsers equal 8 (may be updated in upcoming releases)
-			if(selectedTournament.registeredUsers.Count == 8)
+			if(selectedTournament.registeredUsers.Count == 16)
 			{
 				//Update Tournament When Count = 8, Sign Up = false
 				selectedTournament.signUpActive = false;

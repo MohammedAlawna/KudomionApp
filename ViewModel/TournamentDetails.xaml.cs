@@ -57,11 +57,11 @@ namespace Kudomion.ViewModel
                 }
 
 
-                //Check if number of registeredPlayers equals to 8
+                //Check if number of registeredPlayers equals to 16
                 //If "YES" prepare brackets, if "NOT" do not
-                if (tournyInstance.registeredUsers.Count == 8)
+                if (tournyInstance.registeredUsers.Count == 16)
                 {
-                    //Prepare Brackets, start round! => R1, R2, R3..
+                    //Prepare Brackets, start round! => R1, R2, R3, R4...
                     //2- Create 3 Rounds
                     //A- First Round: 4 matches
                     //Matches are filled with P's(8) from qualifiedPlayers list.
@@ -73,6 +73,14 @@ namespace Kudomion.ViewModel
                      R1P6.Text = tournyInstance.registeredUsers[5].name;
                      R1P7.Text = tournyInstance.registeredUsers[6].name;
                      R1P8.Text = tournyInstance.registeredUsers[7].name;
+                     R1P9.Text = tournyInstance.registeredUsers[8].name;
+                     R1P10.Text = tournyInstance.registeredUsers[9].name;
+                     R1P11.Text = tournyInstance.registeredUsers[10].name;
+                     R1P12.Text = tournyInstance.registeredUsers[11].name;
+                     R1P13.Text = tournyInstance.registeredUsers[12].name;
+                     R1P14.Text = tournyInstance.registeredUsers[13].name;
+                     R1P15.Text = tournyInstance.registeredUsers[14].name;
+                     R1P16.Text = tournyInstance.registeredUsers[15].name;
                 }
                 else
                 {

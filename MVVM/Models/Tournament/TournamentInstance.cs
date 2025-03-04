@@ -15,7 +15,7 @@ namespace KudomionApp.MVVM.Models.Tournament
         public string Name { get; set; }
         public DateTime CreatedAt { get; set; }
         public bool isActive { get; set; } = true;
-        public List<TournamentPlayer> Players { get; set; } = new List<TournamentPlayer>();
+        public List<TournamentPlayer> Players { get; set; } = new();
         public List<List<Match>> Rounds { get; set; } = new();
 
         //This parameterless constructor is used for FB, data retrieval.

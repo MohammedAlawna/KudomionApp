@@ -10,7 +10,7 @@ namespace KudomionApp.MVVM.Models.Tournament
     public class TournamentPlayer
     {
         public string TournamentId { get; set; }
-        public UserModel Player { get; set; }
-        public bool Eliminated { get; set; }
+        public string PlayerName { get; set; }
+        public bool Eliminated { get; set; } = false;
     }
 }

@@ -156,12 +156,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.Tour
 build_metadata.AdditionalFiles.TargetPath = ViewModel\TournamentDetails.xaml
 build_metadata.AdditionalFiles.RelativePath = ViewModel\TournamentDetails.xaml
 
-[E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/TournamentInfo.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.TournamentInfo.xaml
-build_metadata.AdditionalFiles.TargetPath = ViewModel\TournamentInfo.xaml
-build_metadata.AdditionalFiles.RelativePath = ViewModel\TournamentInfo.xaml
-
 [E:/ToGloryProjects/KudomionGit/KudomionApp/ViewModel/TournamentsDashboard.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.ViewModel.TournamentsDashboard.xaml
