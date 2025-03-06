@@ -405,9 +405,9 @@ A built-in chat feature designed for duelists:
 
 > In this implementation, Firebase Authentication is used to handle user sign-ups and logins, ensuring that authentication logic is completely separate from user data storage. A base user model (FirebaseUser) is created to store only essential authentication details like the UID and email, maintaining a clear distinction between authentication and application-specific data.
 
-> To extend user information, a UserProfile model is introduced, which inherits from the base authentication model and includes custom fields like Points, USERTYPE, Ranking and etc..
+> To extend user information, a UserModel is introduced, which inherits from the base authentication model and includes custom fields like Points, USERTYPE, Ranking and etc..
 
-> A dedicated authentication service is implemented to interact with Firebase Auth, handling user registration and login securely. Separately, a user profile service is responsible for storing and retrieving user data from Firestore, ensuring that the application remains modular and scalable.
+> A dedicated authentication service is implemented to interact with Firebase Auth, handling user registration and login securely. Separately, a user model service is responsible for storing and retrieving user data from Firestore, ensuring that the application remains modular and scalable.
 
 > To enforce security, Firestore Security Rules are applied, ensuring that users can only read and modify their own data, preventing unauthorized access. This ensures data integrity and security, following Firebase best practices.
 
