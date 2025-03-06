@@ -57,11 +57,11 @@ ContentTemplate="{DataTemplate local:MainPage}"
         />
        
 
-        <!--<ShellContent
+        <ShellContent
         Title="Rankings"
         Icon="https://i.imgur.com/xMlb9UQ.png"
         ContentTemplate="{DataTemplate local:Leaderboard}"
-        />-->
+        />
 
 
         <ShellContent
@@ -70,11 +70,11 @@ ContentTemplate="{DataTemplate local:MainPage}"
         ContentTemplate="{DataTemplate mvvm:ChatHub}"
         />
 
-        <!--<ShellContent
+       <ShellContent
         Title="Challenges"
         Icon="https://i.imgur.com/oZTRnhQ.png"
         ContentTemplate="{DataTemplate local:Challenges}"
-        />-->
+        />
 
         <ShellContent
         Title="Settings"

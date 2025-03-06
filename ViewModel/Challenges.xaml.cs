@@ -115,7 +115,6 @@ namespace Kudomion
 
 
                 //First:: Get Selected Room (The One You Clicked At).
-               // var getPlayerRoom = await firebase.GetRoomInstant(firstPlayerChild.Text, secondPlayerChild.Text);
                 var getPlayerRoom = getRooms.Where(r => !r.isDone && r.p1 == firstPlayerChild.Text && r.p2 == secondPlayerChild.Text).ToList();
                 firstPlayer = await FirebaseHelper.GetUsrFromName(getPlayerRoom[0].p1);
                 secondPlayer = await FirebaseHelper.GetUsrFromName(getPlayerRoom[0].p2);
@@ -135,14 +134,10 @@ namespace Kudomion
                     return;
                 }
 
-               /* if (firstPlayer.name != getPlayerRoom.p1 && firstPlayer.name != getPlayerRoom.p2)
-                {
-                    await DisplayAlert("Missing Duelist!", "You Are Not Involved In This Room!", "OK!");
-                    return;
-                }*/
+              
                 if (MainPage.currentUser.name == getPlayerRoom[0].p1)
                 {
-                   // getPlayerRoom = await firebase.GetPlayerRoom(MainPage.currentUser.name);
+                   
 
                     //Second Player => winner.
                     getWinningPlayer = secondPlayer;

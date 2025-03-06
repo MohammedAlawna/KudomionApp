@@ -62,8 +62,8 @@ namespace Kudomion.ViewModel
                 if (tournyInstance.registeredUsers.Count == 16)
                 {
                     //Prepare Brackets, start round! => R1, R2, R3, R4...
-                    //2- Create 3 Rounds
-                    //A- First Round: 4 matches
+                    //2- Create 3 Rounds.
+                    //A- First Round: 4 matches.
                     //Matches are filled with P's(8) from qualifiedPlayers list.
                      R1P1.Text = tournyInstance.registeredUsers[0].name;
                      R1P2.Text = tournyInstance.registeredUsers[1].name;
