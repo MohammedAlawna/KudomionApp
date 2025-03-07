@@ -350,6 +350,7 @@ Messages Collection:
 ```
 
 Why Separate Messages?
+
 ✔Scalability: Chat documents won’t grow indefinitely, preventing performance issues.
 
 ✔Faster Load Times: Chat metadata loads instantly without fetching all messages.
