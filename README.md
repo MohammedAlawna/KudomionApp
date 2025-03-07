@@ -319,6 +319,47 @@ Sending Messages
 7- SignalR keeps track of connected users and updates their status.
 ```
 
+## Chat System Data Model & Performance Optimization
+
+Why Use IDs Instead of Full User Objects?
+
+> To ensure performance, scalability, and efficiency, we store only user IDs in chats instead of full user objects.
+
+### Why This Matters?
+
+✔ Efficiency & Performance: If a user is in 500 chats, storing full user objects would duplicate data, slowing down reads and increasing storage costs.
+
+✔ Data Consistency: User profile updates (e.g., username, avatar) instantly reflect across all chats without redundant updates.
+
+✔ Faster Queries: We fetch user details only when needed, keeping chat documents lightweight.
+
+## Message Storage Optimization
+
+Instead of embedding messages in chat documents, we store them in a separate Messages collection:
+```
+Chats Collection:
+  - chatId (string)
+  - participants (array of userIds)
+
+Messages Collection:
+  - messageId (string)
+  - chatId (string)
+  - senderId (string)
+  - content (string)
+  - timestamp (timestamp)
+```
+
+Why Separate Messages?
+✔Scalability: Chat documents won’t grow indefinitely, preventing performance issues.
+
+✔Faster Load Times: Chat metadata loads instantly without fetching all messages.
+
+✔Efficient Message Management: Supports pagination, edits, and deletions without affecting chat structure.
+
+## Built for Future Growth
+
+Our approach ensures a lightweight, high-performance chat system that can scale for millions of users while keeping storage optimized. Future enhancements like SignalR, typing indicators, and multimedia support can be seamlessly integrated without major refactoring.
+
 ## 🔄 Transition Plan: From Firebase to SignalR
 1️⃣ Start with Firebase (Fast MVP launch).
 2️⃣ Modify Data Structure to Support Both Firebase & SignalR.
