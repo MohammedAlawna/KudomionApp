@@ -28,41 +28,7 @@ A bracket-based tournament system designed for competitive Yu-Gi-Oh! events:
 </div>
 
 
-💡 Code Snippet (Match Making, Advancing to next round, etc.)
-
-### Advance Winner
-```
-public void AdvanceWinner(TournamentPlayer winner, int roundNumber)
-{
-    try
-    {
-        //Check if Tournaments is still not finished:
-        if(RoundsInTournament.Count <= roundNumber)
-        {
-            RoundsInTournament.Add(new List<Match>());
-        }
-
-        List<Match> nextRound = RoundsInTournament[roundNumber];
-
-        if(nextRound.Count * 2 < RoundsInTournament[roundNumber - 1].Count)
-        {
-            nextRound.Add(new Match
-            {
-                Round = roundNumber + 1, 
-                Player1 = winner
-            });
-        }
-        else
-        {
-            nextRound[^1].Player2 = winner;
-        }
-    }
-    catch(Exception ex)
-    {
-        Debug.WriteLine(ex.Message);
-    }
-}
-```
+💡 Code Snippet (Match Making)
 
 ### Generate Initial Matches (For the first round)
 ```
@@ -125,185 +91,7 @@ A ranking system for competitive duelists:
 <img width="145" height="250" src="https://i.imgur.com/zbqUZyH.png">
 </div>
 
-💡 CS (CreateRoom, Admit Defeat, Points-Based Ranking System, etc..)
-### CreateRoom
-```
-private async void CreateRoom_Clicked(object sender, EventArgs e)
-{
-    try
-    {
-        if (p2 == null)
-        {
-            await DisplayAlert("Missing Player!", "Please Enter Your Opponent Name", "OK!");
-            return;
-        }
-        bool isUserExist = await firebase.CheckIfUserExists();
-        Console.WriteLine($"Is User Exist: {isUserExist}");
-        if (isUserExist == true)
-        {
-            await DisplayAlert("User Exist!", "You can't have more than one room at once. Please, complete your first match..", "OK!");
-            return;
-        }
-
-        if (p1.Text.ToLower() == p2.Items[p2.SelectedIndex].ToLower())
-        {
-            await DisplayAlert("Same User!", "You can't duel yourself! C'mon! Please Specify Another Opponent..", "OK!");
-            return;
-        }
-
-        if (p1.Text != MainPage.currentLoggedInUser)
-        {
-            await DisplayAlert("Room Error", "You can't create a room using another username.", "OK!");
-            return;
-        }
-
-        //Check If P1 and P2 Dueled Today (24 hours Timer):
-        //TODO 24 hr countdown timer for 2 duelists:
-        //LimitedDuels and LimitedRooms => Models.
-        /*For Same room of p1 and p2, if less than 12 hours
-         * since its time, then deny the duel.
-          */
-
-        Room roomToCreate = new Room();
-        roomToCreate.p1 = p1.Text;
-        // roomToCreate.p2 = "opp";
-        roomToCreate.p2 = p2.Items[p2.SelectedIndex];
-        roomToCreate.isDone = false;
-        roomToCreate.winner = "";
-
-        await firebase.CreateRoom(roomToCreate);
-
-        //TODO Update Number of Duels for both players by 1.
-        UpdateRoomsList();
-        //CheckRooms();
-        await DisplayAlert("Success!", "Room Added! Waiting for your opponent..", "OK!");
-    }
-    catch(Exception ex)
-    {
-        Debug.WriteLine($"Error: {ex.Message}");
-    }
-
-}
-```
-
-### AdmitDefeat
-```
- private async void AdmitDefeat_Clicked(object sender, EventArgs e)
- {
-     
-     try {
-         //The Following Code Is Needed To Get The Specific Room!
-         //1- Get Current Button (Clicked Button)
-         var el = (Button)sender;
-
-         //2- Get Parent of The Button (Main Grid).
-         var parent = (Grid)el.Parent;
-
-         //3- Get First Player Name.
-         var firstPlayerChild = (Label)parent.Children[0];
-
-         //4- Get Second Player Name.
-         var secondPlayerChild = (Label)parent.Children[2];
-
-         var getRooms = await firebase.GetAllRoomsInDB();
-         //var unfinishedRooms = getRooms.Where(r => r.winner == "" && r.isDone == false).ToList();
-
-
-         //First:: Get Selected Room (The One You Clicked At).
-         var getPlayerRoom = getRooms.Where(r => !r.isDone && r.p1 == firstPlayerChild.Text && r.p2 == secondPlayerChild.Text).ToList();
-         firstPlayer = await FirebaseHelper.GetUsrFromName(getPlayerRoom[0].p1);
-         secondPlayer = await FirebaseHelper.GetUsrFromName(getPlayerRoom[0].p2);
-
-         Console.WriteLine($"First Player Is: {firstPlayer.name} Room is: P1 {getPlayerRoom[0].p1} + {getPlayerRoom[0].p2}" + $", Second Player Is: {secondPlayer.name}");
-        
-         //Second:: Get Selected User From That Room.
-         string getSelectedPlayer = getPlayerRoom[0].p1;
-
-         UserModel getLoggedInPlayer = await FirebaseHelper.GetUsrFromName(MainPage.currentLoggedInUser);
-
-       
-         getWinningPlayer = null;
-         if(MainPage.currentUser.name != getPlayerRoom[0].p1 && MainPage.currentUser.name != getPlayerRoom[0].p2)
-         {
-             await DisplayAlert("Duellist not found", "Admit Defeat is not allowed: You are not included in this match.", "OK!");
-             return;
-         }
-
-       
-         if (MainPage.currentUser.name == getPlayerRoom[0].p1)
-         {
-            
-
-             //Second Player => winner.
-             getWinningPlayer = secondPlayer;
-             getWinningPlayer.duels += 1;
-             getWinningPlayer.points += 3;
-             firstPlayer.duels += 1;
-             getPlayerRoom[0].isDone = true;
-             getPlayerRoom[0].winner = getWinningPlayer.name;
-
-             //Update User and Room Records.
-             await firebase.UpdateUser(getWinningPlayer.name, getWinningPlayer);
-             await firebase.UpdateUser(firstPlayer.name, firstPlayer);
-             await firebase.UpdateRoom(getPlayerRoom[0].p1, getPlayerRoom[0].p2, getPlayerRoom[0], getPlayerRoom[0].isDone);
-
-             //Update User Profile In Home Page.
-             UserModel currentUser = await FirebaseHelper.GetUsrFromName(MainPage.currentUser.name);
-
-           
-             //Prompt Admit Defeat!
-             await DisplayAlert("You Lost!", $"You just admit defeated! Duel Records Will be change", "OK!");
-
-             //Update Rooms List.
-             UpdateRoomsList();
-
-             
-
-             //Reseting Room Values:
-             ResetRoomValues();
-
-             return;
-         }
-         if (MainPage.currentUser.name != getPlayerRoom[0].p1)
-         {
-            // getPlayerRoom = await firebase.GetPlayerRoom(MainPage.currentUser.name);
-
-             //First Player => winner.
-             getWinningPlayer = firstPlayer;
-             getWinningPlayer.duels += 1;
-             getWinningPlayer.points += 3;
-             secondPlayer.duels += 1;
-             getPlayerRoom[0].isDone = true;
-             getPlayerRoom[0].winner = getWinningPlayer.name;
-
-             //Update User and Room Records.
-             await firebase.UpdateUser(getWinningPlayer.name, getWinningPlayer);
-             await firebase.UpdateUser(secondPlayer.name, secondPlayer);
-             await firebase.UpdateRoom(getPlayerRoom[0].p2, getPlayerRoom[0].p1, getPlayerRoom[0], getPlayerRoom[0].isDone);
-
-             //Update User Profile In Home Page.
-             UserModel currentUser = await FirebaseHelper.GetUsrFromName(MainPage.currentUser.name);
-          
-             //Prompt Admit Defeat.
-             await DisplayAlert("You Lost!", $"You just admit defeated! Duel Records Will be changed!" + getWinningPlayer.name, "OK");
-
-             //Update Rooms List.
-             UpdateRoomsList();
-
-             //Reseting Room Values:
-             ResetRoomValues();
-             
-
-             return;
-         }
-
-     }
-     catch(Exception er)
-     {
-         await DisplayAlert("Exception!", $"{er}, {er.Message}", "OK!");
-     }
- }
-```
+💡 Code Snippet (Points-Based Ranking System)
 
 ### Points-Based Ranking System
 ```
@@ -432,24 +220,7 @@ public class UserModel
     public int ranking { get; set; }
     public int points { get; set; }
   
-    public string usertype { get; set; }
-    
-    public string password { get; set; }
-   
-    public string NumberOfPosts
-    {
-        get
-        {
-            return posts.ToString();
-        }
-    }
-
-    public UserModel()
-    {
-        friendRequests = new List<UserModel>();
-        friendsList = new List<UserModel>();
-        blockedList = new List<UserModel>();
-    }
+    public string usertype { get; set; }    
 }
 ```
 
@@ -477,94 +248,82 @@ await firebase.AddUser(userName.Text, userID.LocalId);
 <img width="145" height="250" src="https://i.imgur.com/XeMe2Yg.png">
 </div>
 
-💡 CS (Custom Reaction, React)
-### LoveReactionTapped
+## Chat System Architecture - MVP & Scalability Plan
+
+### 📌 Overview
+
+The following depicts the design and implementation of the chat system, starting with Firebase for the MVP and ensuring flexibility for SignalR integration in future releases.
+
+#### 🛠️ MVP: Firebase-Based Chat System
+
+✅ User Authentication (via Firebase Auth).
+
+✅ Private Chats & Public Channels.
+
+✅ Message Sending & Receiving (Firestore-based real-time updates).
+
+✅ Push Notifications (Firebase Cloud Messaging - FCM).
+
+✅ Basic Message Actions (Send, Delete).
+
+MVP: Basic Data Structure
 ```
-private async void LoveReactionTapped(object sender, TappedEventArgs e)
-{
-    /*Multi Reaction System Algorithm Starts
-    1.Check reaction(string).
-            2. APPLY THIS => (A) if reaction is LOVE then,
-               1st: Access parent stacklayout for the LoveReaction element.
-               2nd: Create a Reactions with type of LOVE and use the current user reacted
-               3rd: Attach that reaction to the news and update it to the fb database.
-               4th: Always check if the user reacted to post, if user reacted make bg of
-                    that stacklayout for reaction's bacgkround == royalblue.
-               5th: Assign number of Love using special LINQ command.to get love reaction count.
-               (B) if reaction is LAUGH then,
-               == Do same as with LOVE just change the type of reaction to laugh D: ==
+Users Collection:
+  - userId (string)
+  - username (string)
+  - lastSeen (timestamp)
+  - isOnline (boolean)
 
-            Algortihm Ends*/
+Chats Collection:
+  - chatId (string)
+  - participants ([userId, userId])
+  - lastMessage (string)
+  - lastUpdated (timestamp)
 
-    //Find Post Details:
-           var getThisBorder = (Border)sender;
-           var getBorderParent = (StackLayout) getThisBorder.Parent.Parent.Parent;
-           var getStackChild = (StackLayout)getBorderParent.Children[1];
-           var getDesiredText = (Label)getStackChild.Children[0];
-
-           var getNewChildren = (StackLayout) getBorderParent.Children[0];
-           var getReactFrameChild = (StackLayout)getNewChildren.Children[1];
-           var getBorderChild =(Border) getReactFrameChild.Children[0];
-           var getReactStack = (StackLayout) getBorderChild.Content;
-           var getReactLabel = (Label) getReactStack.Children[1];
-           
-           //Debug.WriteLine("NO REACTIONS: " + getReactLabel.Text);
-
-    //Quick Changing of BG Color and Number of Reactions:
-    getThisBorder.BackgroundColor = Colors.RoyalBlue;
-    int NumberOfCurrentReactions = Int32.Parse(getReactLabel.Text);
-    
-    //Debug.WriteLine(IncrementedNumberOfReactions.ToString());
-    
-  
-
-
-    //getReactLabel.Text = IncrementedNumberOfReactions.ToString();
-
-
-    //Get Desired Post from DB (Query):
-    var queryPost = await newsLinq.GetNewsItemByName(getDesiredText.Text);
-    
-    //Access BG Button:
-    //Debug.WriteLine($"Border BG IS: {getThisBorder.BackgroundColor.ToHex()}");
-    
-    //Check if User Already Reacted (Return and Prompt: You already reacted with this post)
-    //Process Reaction:
-
-    bool DidUserReact = CheckIfUserReacted(MainPage.currentLoggedInUser, "LOVE", queryPost);
-    if (DidUserReact == true) 
-    {
-        //1- Change BG color to 1c1c1c
-        //FromHex is obsolete: no longer recommended to be used. Its deprecated.
-        getThisBorder.BackgroundColor = Color.FromHex("#1c1c1c");
-
-        //2- Visual reduction of Reactions number:
-        int DecrementedNumberOfReactions = NumberOfCurrentReactions - 1;
-        getReactLabel.Text = DecrementedNumberOfReactions.ToString();
-
-        //3- Un-React, new c
-        UnreactToNewsItem(queryPost, "LOVE", getDesiredText.Text);
-    }
-    if(DidUserReact == false)
-    {
-        //If User Did Not React, Then:
-        //2- Change Button's BG to RoyalBlue Temp:
-        getThisBorder.BackgroundColor = Colors.RoyalBlue;
-
-        //2- Visaul increase of Reactions number:
-        int IncrementedNumberOfReactions = NumberOfCurrentReactions + 1;
-        getReactLabel.Text = IncrementedNumberOfReactions.ToString();
-
-
-        //3- Call React Method:
-        ReactToNewsItem(queryPost, "LOVE", getDesiredText.Text);
-
-    }
-
-
-    //await DisplayAlert("Oh!", $"You Just Loved This Post Asshole! {queryPost.Content}, Laugh: {queryPost.NoLaughReactions.ToString()}", "OK!");
-}
+Messages Collection:
+  - messageId (string)
+  - chatId (string)
+  - senderId (string)
+  - content (string)
+  - timestamp (timestamp)
+  - isDeleted (boolean)
 ```
+
+### 📈 Future Plan: SignalR Integration
+
+While Firebase provides a simple and effective chat solution, it has limitations in tracking presence, message delivery status, and handling heavy traffic efficiently.
+
+To scale the chat system, we will introduce ASP.NET Core with SignalR for real-time communication.
+
+📍 Features After MVP (With SignalR)
+
+✅ Real-time message delivery using SignalR instead of Firestore reads.
+
+✅ Presence Tracking (See who is online).
+
+✅ Typing Indicators (Live feedback when someone is typing).
+
+✅ Message Status Updates (Sent, Delivered, Seen).
+
+✅ Better Scalability & Cost Optimization (Less Firestore reads).
+
+📍 How SignalR Works in the Chat System
+```
+1- Client (Mobile/Web App) Connects to SignalR Hub
+2- Establishes a WebSocket connection for real-time communication.
+Sending Messages
+3- When a user sends a message, it is sent to the SignalR Hub, stored in the SQL database, and broadcast to other clients in real time.
+4- Tracking Message Status (Delivered/Seen)
+5- When a recipient opens a message, SignalR updates the status instantly.
+6- Presence Tracking (Online/Offline Users)
+7- SignalR keeps track of connected users and updates their status.
+```
+
+## 🔄 Transition Plan: From Firebase to SignalR
+1️⃣ Start with Firebase (Fast MVP launch).
+2️⃣ Modify Data Structure to Support Both Firebase & SignalR.
+3️⃣ Introduce SignalR as a Parallel System for Real-Time Updates.
+4️⃣ Slowly Reduce Firestore Reads & Move to SQL + SignalR for Scalability.
 
 ## ⚙️ Tech Stack & Development History
 
