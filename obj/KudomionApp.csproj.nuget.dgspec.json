@@ -103,6 +103,10 @@
               "target": "Package",
               "version": "[8.0.3, )",
               "autoReferenced": true
+            },
+            "Plugin.Firebase.Firestore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
             }
           },
           "imports": [
@@ -166,6 +170,10 @@
               "target": "Package",
               "version": "[8.0.3, )",
               "autoReferenced": true
+            },
+            "Plugin.Firebase.Firestore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
             }
           },
           "imports": [
@@ -229,6 +237,10 @@
               "target": "Package",
               "version": "[8.0.3, )",
               "autoReferenced": true
+            },
+            "Plugin.Firebase.Firestore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
             }
           },
           "imports": [
@@ -287,6 +299,10 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.7, )"
+            },
+            "Plugin.Firebase.Firestore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
             }
           },
           "imports": [

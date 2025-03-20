@@ -7,7 +7,7 @@ using System.Threading.Tasks.Dataflow;
 
 namespace KudomionApp.MVVM.Models.Chat
 {
-    class Message
+    public class Message
     {
         //Unique Identifier for the Message.
         public string Id { get; set; }
