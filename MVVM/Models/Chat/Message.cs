@@ -22,14 +22,14 @@ namespace KudomionApp.MVVM.Models.Chat
         public string Content { get; set; }
 
         //The Time when the message was sent.
-        public DateTime MessageTimeStamp { get; set; }
+        public DateTimeOffset MessageTimeStamp { get; set; }
 
         //Was the Message Fired, Landed, Spotted.
         public MessageStatus Status { get; set; }
 
     }
 
-    enum MessageStatus
+    public enum MessageStatus
     {
         Fired, //Means Sent 
         Landed, //Means Delivered
