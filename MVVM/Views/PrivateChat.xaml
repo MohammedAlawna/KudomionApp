@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KudomionApp.MVVM.Views.PrivateChat"
+             BackgroundColor="#1c1c1c"
+             Title="PrivateChat">
+    <StackLayout>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+        </Grid>
+        
+       
+        <ListView ItemsSource="{Binding Messages}"
+                  Grid.Row="0"
+                  HasUnevenRows="True"
+                  x:Name="MessagesListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Content}" FontSize="14" FontAttributes="Bold" />
+                            <Label Text="{Binding MessageTimeStamp, StringFormat='{0:HH:mm}'}" FontSize="9" FontAttributes="Italic" HorizontalOptions="End" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Chat Input & Send Button -->
+        <StackLayout Grid.Row="1" Orientation="Horizontal" Padding="0" BackgroundColor="#1c1c1c" MaximumHeightRequest="50">
+            <!-- Emoji Placeholder (Future Implementation) -->
+            <Button Text="😊" WidthRequest="40" Clicked="EmojisListClicked"/>
+            <!--Clicked="OnEmojiClicked"-->
+            <!-- Message Input -->
+            <Editor x:Name="MessageEntry"
+               TextColor="White"
+               AutoSize="TextChanges"
+               Placeholder="Type a message..."
+               Text="{Binding NewMessage, Mode=TwoWay}"
+               HorizontalOptions="FillAndExpand"/>
+
+            <!-- Send Button -->
+            <Button Text="📩" WidthRequest="50" Command="{Binding SendMessageCommand}" />
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

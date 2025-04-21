@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="fragment_container_view_tag" type="id"/>
-    <item name="special_effects_controller_view_tag" type="id"/>
-    <item name="visible_removing_fragment_view_tag" type="id"/>
-    <declare-styleable name="Fragment">
+    <item name="nav_controller_view_tag" type="id"/>
+    <declare-styleable name="ActivityNavigator">
         <attr name="android:name"/>
-        <attr name="android:id"/>
-        <attr name="android:tag"/>
+        <attr format="string" name="action"/>
+        <attr format="string" name="data"/>
+        <attr format="string" name="dataPattern"/>
+        <attr format="string" name="targetPackage"/>
     </declare-styleable>
-    <declare-styleable name="FragmentContainerView">
-        <attr name="android:name"/>
-        <attr name="android:tag"/>
+    <declare-styleable name="NavHost">
+        <attr format="reference" name="navGraph"/>
+    </declare-styleable>
+    <declare-styleable name="NavInclude">
+        <attr format="reference" name="graph"/>
     </declare-styleable>
 </resources>

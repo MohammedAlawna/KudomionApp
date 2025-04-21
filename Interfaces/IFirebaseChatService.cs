@@ -9,7 +9,7 @@ namespace KudomionApp.Interfaces
 {
     public interface IFirebaseChatService
     {
-        Task<string> CreateChatAsync(List<string> participantsIDs, bool isPublic, bool isGroup);
+        Task<string> CreateChatAsync(List<string> participantsIDs, bool isPublic, bool isClan);
         Task SendMessageAsync(string chatId, string senderId, string content);
         Task<List<Message>> GetMessagesAsync(string chatId);
     }

@@ -3,80 +3,40 @@
   "WorkspaceRootPath": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\models\\chat\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\models\\chat\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\views\\chatlist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\views\\chatlist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\models\\chat\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\models\\chat\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\viewmodel\\tournamentsdashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:viewmodel\\tournamentsdashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\views\\news.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\views\\news.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\views\\privatechat.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\views\\privatechat.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\views\\news.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\views\\news.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\viewmodel\\newsfeed.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:viewmodel\\newsfeed.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\viewmodel\\signuppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:viewmodel\\signuppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\model\\userssearchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:model\\userssearchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\viewmodel\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:viewmodel\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\viewmodel\\challenges.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:viewmodel\\challenges.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\viewmodel\\leaderboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:viewmodel\\leaderboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\views\\chathub.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\views\\chathub.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\views\\privatechat.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\views\\privatechat.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\viewmodel\\leaderboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:viewmodel\\leaderboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\models\\chat\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\models\\chat\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\models\\tournament\\bracket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\models\\tournament\\bracket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\services\\firebasechatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:services\\firebasechatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\models\\tournament\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\models\\tournament\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\viewmodel\\tournamentdetails.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:viewmodel\\tournamentdetails.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\viewmodel\\tournamentdetails.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:viewmodel\\tournamentdetails.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\firebasemanager\\tournamentshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:firebasemanager\\tournamentshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\models\\chat\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\models\\chat\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,24 +46,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TournamentsDashboard.xaml",
+              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\TournamentsDashboard.xaml",
+              "RelativeDocumentMoniker": "ViewModel\\TournamentsDashboard.xaml",
+              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\TournamentsDashboard.xaml",
+              "RelativeToolTip": "ViewModel\\TournamentsDashboard.xaml",
+              "ViewState": "AQIAABYAAAAAAAAAAAAhwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-17T23:23:20.938Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ChatList.xaml",
+              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\ChatList.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\ChatList.xaml",
+              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\ChatList.xaml",
+              "RelativeToolTip": "MVVM\\Views\\ChatList.xaml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAcwBYAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-17T22:54:21.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PrivateChat.xaml.cs",
+              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\PrivateChat.xaml.cs",
+              "RelativeDocumentMoniker": "MVVM\\Views\\PrivateChat.xaml.cs",
+              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\PrivateChat.xaml.cs",
+              "RelativeToolTip": "MVVM\\Views\\PrivateChat.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T22:50:22.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\AppShell.xaml",
+              "RelativeDocumentMoniker": "AppShell.xaml",
+              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\AppShell.xaml",
+              "RelativeToolTip": "AppShell.xaml",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAAAFgAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-25T22:44:18.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChatHub.xaml",
+              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\ChatHub.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\ChatHub.xaml",
+              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\ChatHub.xaml",
+              "RelativeToolTip": "MVVM\\Views\\ChatHub.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-25T22:47:04.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PrivateChat.xaml",
+              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\PrivateChat.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\PrivateChat.xaml",
+              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\PrivateChat.xaml",
+              "RelativeToolTip": "MVVM\\Views\\PrivateChat.xaml",
+              "ViewState": "AQIAABEAAAAAAAAAAAAhwBgAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-25T02:17:04.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FirebaseChatService.cs",
+              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\Services\\FirebaseChatService.cs",
+              "RelativeDocumentMoniker": "Services\\FirebaseChatService.cs",
+              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\Services\\FirebaseChatService.cs",
+              "RelativeToolTip": "Services\\FirebaseChatService.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAcwCAAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T02:02:57.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Message.cs",
               "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Models\\Chat\\Message.cs",
               "RelativeDocumentMoniker": "MVVM\\Models\\Chat\\Message.cs",
               "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Models\\Chat\\Message.cs",
               "RelativeToolTip": "MVVM\\Models\\Chat\\Message.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAmwB8AAAALAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAIAwwAwAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T01:38:23.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T01:38:23.981Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "Chat.cs",
               "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Models\\Chat\\Chat.cs",
               "RelativeDocumentMoniker": "MVVM\\Models\\Chat\\Chat.cs",
@@ -112,210 +156,6 @@
               "ViewState": "AQIAAA8AAAAAAAAAAAAtwBIAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T01:30:56.664Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "News.xaml.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\News.xaml.cs",
-              "RelativeDocumentMoniker": "MVVM\\Views\\News.xaml.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\News.xaml.cs",
-              "RelativeToolTip": "MVVM\\Views\\News.xaml.cs",
-              "ViewState": "AQIAAK4AAAAAAAAAAAAQwLEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T01:31:14.79Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "News.xaml",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\News.xaml",
-              "RelativeDocumentMoniker": "MVVM\\Views\\News.xaml",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\News.xaml",
-              "RelativeToolTip": "MVVM\\Views\\News.xaml",
-              "ViewState": "AQIAABsAAAAAAAAAAAAhwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-06T01:31:09.85Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NewsFeed.xaml.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\NewsFeed.xaml.cs",
-              "RelativeDocumentMoniker": "ViewModel\\NewsFeed.xaml.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\NewsFeed.xaml.cs",
-              "RelativeToolTip": "ViewModel\\NewsFeed.xaml.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T01:30:24.103Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "User.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\Model\\User.cs",
-              "RelativeDocumentMoniker": "Model\\User.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\Model\\User.cs",
-              "RelativeToolTip": "Model\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T01:21:25.813Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SignUpPage.xaml.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\SignUpPage.xaml.cs",
-              "RelativeDocumentMoniker": "ViewModel\\SignUpPage.xaml.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\SignUpPage.xaml.cs",
-              "RelativeToolTip": "ViewModel\\SignUpPage.xaml.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAWwEAAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T01:18:40.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UsersSearchViewModel.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\Model\\UsersSearchViewModel.cs",
-              "RelativeDocumentMoniker": "Model\\UsersSearchViewModel.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\Model\\UsersSearchViewModel.cs",
-              "RelativeToolTip": "Model\\UsersSearchViewModel.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T01:17:28.477Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LoginPage.xaml.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\LoginPage.xaml.cs",
-              "RelativeDocumentMoniker": "ViewModel\\LoginPage.xaml.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\LoginPage.xaml.cs",
-              "RelativeToolTip": "ViewModel\\LoginPage.xaml.cs",
-              "ViewState": "AQIAAJcAAAAAAAAAAAAMwKMAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T01:16:38.172Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Challenges.xaml.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\Challenges.xaml.cs",
-              "RelativeDocumentMoniker": "ViewModel\\Challenges.xaml.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\Challenges.xaml.cs",
-              "RelativeToolTip": "ViewModel\\Challenges.xaml.cs",
-              "ViewState": "AQIAABMBAAAAAAAAAAD4vxsBAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T00:55:35.174Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Leaderboard.xaml.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\Leaderboard.xaml.cs",
-              "RelativeDocumentMoniker": "ViewModel\\Leaderboard.xaml.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\Leaderboard.xaml.cs",
-              "RelativeToolTip": "ViewModel\\Leaderboard.xaml.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAhwDsAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T00:54:15.808Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\AppShell.xaml",
-              "RelativeDocumentMoniker": "AppShell.xaml",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\AppShell.xaml",
-              "RelativeToolTip": "AppShell.xaml",
-              "ViewState": "AQIAADkAAAAAAAAAAAAhwEAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-06T00:46:00.898Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "App.xaml",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "ViewState": "AQIAABkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-06T00:45:57.127Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Leaderboard.xaml",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\Leaderboard.xaml",
-              "RelativeDocumentMoniker": "ViewModel\\Leaderboard.xaml",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\Leaderboard.xaml",
-              "RelativeToolTip": "ViewModel\\Leaderboard.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-06T00:45:54.022Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Match.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Models\\Tournament\\Match.cs",
-              "RelativeDocumentMoniker": "MVVM\\Models\\Tournament\\Match.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Models\\Tournament\\Match.cs",
-              "RelativeToolTip": "MVVM\\Models\\Tournament\\Match.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T00:29:33.367Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "TournamentDetails.xaml.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\TournamentDetails.xaml.cs",
-              "RelativeDocumentMoniker": "ViewModel\\TournamentDetails.xaml.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\TournamentDetails.xaml.cs",
-              "RelativeToolTip": "ViewModel\\TournamentDetails.xaml.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAAAEEAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T23:21:02.524Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "TournamentDetails.xaml",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\TournamentDetails.xaml",
-              "RelativeDocumentMoniker": "ViewModel\\TournamentDetails.xaml",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\TournamentDetails.xaml",
-              "RelativeToolTip": "ViewModel\\TournamentDetails.xaml",
-              "ViewState": "AQIAAJ0AAAAAAAAAAAAIwP8AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-03T22:35:03.791Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Bracket.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Models\\Tournament\\Bracket.cs",
-              "RelativeDocumentMoniker": "MVVM\\Models\\Tournament\\Bracket.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Models\\Tournament\\Bracket.cs",
-              "RelativeToolTip": "MVVM\\Models\\Tournament\\Bracket.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAvwD8AAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T23:11:56.888Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "TournamentsHandler.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\FirebaseManager\\TournamentsHandler.cs",
-              "RelativeDocumentMoniker": "FirebaseManager\\TournamentsHandler.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\FirebaseManager\\TournamentsHandler.cs",
-              "RelativeToolTip": "FirebaseManager\\TournamentsHandler.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAxwBAAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T22:50:27.104Z"
             }
           ]
         }

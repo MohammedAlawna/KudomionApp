@@ -52,6 +52,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.MVVM.Views.Cha
 build_metadata.AdditionalFiles.TargetPath = MVVM\Views\ChatHub.xaml
 build_metadata.AdditionalFiles.RelativePath = MVVM\Views\ChatHub.xaml
 
+[E:/ToGloryProjects/KudomionGit/KudomionApp/MVVM/Views/ChatList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.MVVM.Views.ChatList.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\ChatList.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\ChatList.xaml
+
 [E:/ToGloryProjects/KudomionGit/KudomionApp/MVVM/Views/ConsumableWebView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.MVVM.Views.ConsumableWebView.xaml
@@ -69,6 +75,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.MVVM.Views.News.xaml
 build_metadata.AdditionalFiles.TargetPath = MVVM\Views\News.xaml
 build_metadata.AdditionalFiles.RelativePath = MVVM\Views\News.xaml
+
+[E:/ToGloryProjects/KudomionGit/KudomionApp/MVVM/Views/PrivateChat.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = KudomionApp.MVVM.Views.PrivateChat.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\PrivateChat.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\PrivateChat.xaml
 
 [E:/ToGloryProjects/KudomionGit/KudomionApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

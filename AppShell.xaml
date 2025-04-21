@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Kudomion"
     xmlns:mvvm="clr-namespace:Kudomion.ViewModel.MVVM.Views"
+    xmlns:views="clr-namespace:KudomionApp.MVVM.Views"
     xmlns:viewModel="clr-namespace:Kudomion.ViewModel"
     xmlns:controls="clr-namespace:Kudomion.Controls"
     Shell.BackgroundColor="RoyalBlue"
@@ -26,8 +27,9 @@
      Title="SignUpD"
      ContentTemplate="{DataTemplate local:SignUpPage}"
    />-->
+      
 
-        <ShellContent
+            <ShellContent
 Icon="https://i.imgur.com/HuxgwMX.png"
 Route="DecksList"
 Title="Home"
@@ -63,14 +65,15 @@ ContentTemplate="{DataTemplate local:MainPage}"
         ContentTemplate="{DataTemplate local:Leaderboard}"
         />
 
-
+       
         <ShellContent
         Title="Chat"
         Icon="https://i.imgur.com/0czlZpX.png"
-        ContentTemplate="{DataTemplate mvvm:ChatHub}"
+        ContentTemplate="{DataTemplate views:ChatList}"
         />
+    
 
-       <ShellContent
+        <ShellContent
         Title="Challenges"
         Icon="https://i.imgur.com/oZTRnhQ.png"
         ContentTemplate="{DataTemplate local:Challenges}"
@@ -114,7 +117,7 @@ ContentTemplate="{DataTemplate local:MainPage}"
         />
 
       -->
-
+      
     </FlyoutItem>
 
 </Shell>

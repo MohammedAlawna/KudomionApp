@@ -4,6 +4,7 @@
              BackgroundColor="#1c1c1c"
              x:Class="Kudomion.ViewModel.MVVM.Views.ChatHub">
     <ContentPage.Content>
+        
         <ScrollView FlowDirection="LeftToRight" VerticalOptions="FillAndExpand" Margin="10">
             <StackLayout WidthRequest="300" VerticalOptions="CenterAndExpand" Margin="20" >
                 <Border WidthRequest="275" Stroke="Black" BackgroundColor="#2c2c2e" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
