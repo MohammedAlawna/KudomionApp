@@ -28,14 +28,12 @@
      ContentTemplate="{DataTemplate local:SignUpPage}"
    />-->
       
-
-            <ShellContent
-Icon="https://i.imgur.com/HuxgwMX.png"
-Route="DecksList"
-Title="Home"
-
-ContentTemplate="{DataTemplate local:MainPage}"
-/>
+            
+        <ShellContent
+            Icon="https://i.imgur.com/HuxgwMX.png"
+            Route="DecksList"
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}" />
 
         <ShellContent
         Title="News"

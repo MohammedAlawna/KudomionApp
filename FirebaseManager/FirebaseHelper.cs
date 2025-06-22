@@ -15,7 +15,6 @@ namespace Kudomion.FirebaseManager
     public class FirebaseHelper
     {
 
-       
         public FirebaseClient firebaseClient = new FirebaseClient("https://kudo1-38995-default-rtdb.firebaseio.com/");
         public static FirebaseClient GlobalFBClient = new FirebaseClient("https://kudo1-38995-default-rtdb.firebaseio.com/");
         

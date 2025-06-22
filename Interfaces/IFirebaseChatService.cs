@@ -12,5 +12,6 @@ namespace KudomionApp.Interfaces
         Task<string> CreateChatAsync(List<string> participantsIDs, bool isPublic, bool isClan);
         Task SendMessageAsync(string chatId, string senderId, string content);
         Task<List<Message>> GetMessagesAsync(string chatId);
+        Task<List<Chat>> GetChatsForUserAsync(string userId);
     }
 }

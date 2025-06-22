@@ -2,8 +2,17 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KudomionApp.MVVM.Views.PrivateChat"
+             xmlns:viewModel="clr-namespace:KudomionApp.MVVM.ViewModels"
              BackgroundColor="#1c1c1c"
              Title="PrivateChat">
+
+    <ContentPage.BindingContext>
+        <viewModel:PrivateChatViewModel />
+    </ContentPage.BindingContext>
+
+
+
+
     <StackLayout>
         
         <Grid>

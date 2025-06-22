@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 using Google.Cloud.Firestore;
 using KudomionApp.MVVM.Models.Chat;
 using System.Diagnostics;
+using Google.Cloud.Firestore.V1;
+using Google.Apis.Auth.OAuth2;
+using System.Threading.Channels;
+//using AVFoundation;
 
 
 
@@ -14,12 +18,37 @@ namespace KudomionApp.Services
 {
     public class FirebaseChatService : IFirebaseChatService
     {
+
         private readonly FirestoreDb _firestore;
 
         public FirebaseChatService()
         {
+            //  D:\fbkeys\serviceAcc.json
+            // string path = @"C:\Users\YourName\firebase-keys\kudo1-service-account.json";
+
+
+            /*   string path = "D:/fbkeys/serviceAcc.json";
+               Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", path);
+               _firestore = FirestoreDb.Create("kudo1-38995");*/
             //Firestore Instance replaced with Google Cloud ID.
+
+            var fileName = "serviceAcc.json";
+            var destinationPath = Path.Combine(FileSystem.AppDataDirectory, fileName);
+
+            // Only copy once
+            if (!File.Exists(destinationPath))
+            {
+                using var stream = FileSystem.OpenAppPackageFileAsync(fileName).Result;
+                using var fileStream = File.Create(destinationPath);
+                stream.CopyTo(fileStream);
+            }
+
+            // Set environment variable for Google APIs
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", destinationPath);
+
+            // Create Firestore instance
             _firestore = FirestoreDb.Create("kudo1-38995");
+
         }
 
         //Create New Chat and Store It In Firestore:
@@ -57,8 +86,8 @@ namespace KudomionApp.Services
                 ChatId = chatId,
                 SenderId = senderId,
                 Content = content,
-                MessageTimeStamp = DateTimeOffset.UtcNow,
-                Status = MessageStatus.Fired
+                MessageTimeStamp = DateTime.UtcNow,
+                //Status = MessageStatus.Fired
                 };
 
                 //Store in Messages / Firestore Collection:
@@ -71,6 +100,29 @@ namespace KudomionApp.Services
                 
             }
 
+        }
+
+        public async Task<List<Chat>> GetChatsForUserAsync(string userId)
+        {
+            try
+            {
+                var chats = new List<Chat>();
+
+                var querySnapshot = await _firestore.Collection("Chats").
+                    WhereArrayContains("ParticipantsIDs", userId).GetSnapshotAsync();
+
+                foreach(var document in querySnapshot.Documents)
+                {
+                    var chat = document.ConvertTo<Chat>();
+                    chats.Add(chat);
+                }
+                return chats; 
+            }
+            catch(Exception ex)
+            {
+                Debug.WriteLine("Exception occurred while getting chats: " + ex.Message);
+                return new List<Chat>();
+            }
         }
 
         public async Task<List<Message>> GetMessagesAsync(string chatId)

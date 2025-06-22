@@ -61,38 +61,11 @@
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
-      <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
-      <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
-      <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
-      <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
-      <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\btlebtn.scale-100.png">
-      <PackagePath>btlebtn.scale-100.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ytb.scale-100.png">
       <PackagePath>ytb.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ykjptm.scale-100.png">
       <PackagePath>ykjptm.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ygb.scale-100.jpg">
-      <PackagePath>ygb.scale-100.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\yg.scale-100.png">
-      <PackagePath>yg.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\splsh.scale-100.jpg">
-      <PackagePath>splsh.scale-100.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ranking.scale-100.png">
       <PackagePath>ranking.scale-100.png</PackagePath>
@@ -100,8 +73,11 @@
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\fbk.scale-100.png">
       <PackagePath>fbk.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dscrd.scale-100.png">
-      <PackagePath>dscrd.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\btle.scale-100.png">
+      <PackagePath>btle.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\splsh.scale-100.jpg">
+      <PackagePath>splsh.scale-100.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\chtbtn.scale-100.png">
       <PackagePath>chtbtn.scale-100.png</PackagePath>
@@ -244,11 +220,26 @@
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ykjoma.scale-100.png">
-      <PackagePath>ykjoma.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\yg.scale-100.png">
+      <PackagePath>yg.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\emj.scale-100.png">
+      <PackagePath>emj.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ygb.scale-100.jpg">
+      <PackagePath>ygb.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dscrd.scale-100.png">
+      <PackagePath>dscrd.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ykjblog.scale-100.png">
       <PackagePath>ykjblog.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\btlebtn.scale-100.png">
+      <PackagePath>btlebtn.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ykjoma.scale-100.png">
+      <PackagePath>ykjoma.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\prfle.scale-100.png">
       <PackagePath>prfle.scale-100.png</PackagePath>
@@ -259,11 +250,20 @@
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\notif.scale-100.png">
       <PackagePath>notif.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\emj.scale-100.png">
-      <PackagePath>emj.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
+      <PackagePath>dotnet_bot.scale-400.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\btle.scale-100.png">
-      <PackagePath>btle.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
+      <PackagePath>dotnet_bot.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
+      <PackagePath>dotnet_bot.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
+      <PackagePath>dotnet_bot.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
+      <PackagePath>dotnet_bot.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\ToGloryProjects\KudomionGit\KudomionApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\KudomionApp.deps.json">
       <PackagePath>KudomionApp.deps.json</PackagePath>
@@ -292,8 +292,14 @@
     <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\firebasedatabase.net\4.2.0\lib\netstandard2.0\Firebase.dll">
       <PackagePath>Firebase.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\google.api.gax\4.8.0\lib\netstandard2.0\Google.Api.Gax.dll">
+    <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\google.api.commonprotos\2.16.0\lib\netstandard2.0\Google.Api.CommonProtos.dll">
+      <PackagePath>Google.Api.CommonProtos.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\google.api.gax\4.9.0\lib\netstandard2.0\Google.Api.Gax.dll">
       <PackagePath>Google.Api.Gax.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\google.api.gax.grpc\4.9.0\lib\netstandard2.0\Google.Api.Gax.Grpc.dll">
+      <PackagePath>Google.Api.Gax.Grpc.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\google.api.gax.rest\4.8.0\lib\netstandard2.0\Google.Api.Gax.Rest.dll">
       <PackagePath>Google.Api.Gax.Rest.dll</PackagePath>
@@ -306,6 +312,33 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\google.apis.core\1.68.0\lib\net6.0\Google.Apis.Core.dll">
       <PackagePath>Google.Apis.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\google.cloud.firestore\3.10.0\lib\netstandard2.0\Google.Cloud.Firestore.dll">
+      <PackagePath>Google.Cloud.Firestore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\google.cloud.firestore.v1\3.10.0\lib\netstandard2.0\Google.Cloud.Firestore.V1.dll">
+      <PackagePath>Google.Cloud.Firestore.V1.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\google.cloud.location\2.3.0\lib\netstandard2.0\Google.Cloud.Location.dll">
+      <PackagePath>Google.Cloud.Location.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\google.longrunning\3.3.0\lib\netstandard2.0\Google.LongRunning.dll">
+      <PackagePath>Google.LongRunning.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\google.protobuf\3.28.2\lib\net5.0\Google.Protobuf.dll">
+      <PackagePath>Google.Protobuf.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\grpc.auth\2.66.0\lib\netstandard2.0\Grpc.Auth.dll">
+      <PackagePath>Grpc.Auth.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\grpc.core.api\2.66.0\lib\netstandard2.1\Grpc.Core.Api.dll">
+      <PackagePath>Grpc.Core.Api.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\grpc.net.client\2.66.0\lib\net8.0\Grpc.Net.Client.dll">
+      <PackagePath>Grpc.Net.Client.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\grpc.net.common\2.66.0\lib\net8.0\Grpc.Net.Common.dll">
+      <PackagePath>Grpc.Net.Common.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\litedb\4.1.4\lib\netstandard2.0\LiteDB.dll">
       <PackagePath>LiteDB.dll</PackagePath>
@@ -414,6 +447,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\system.codedom\7.0.0\lib\net7.0\System.CodeDom.dll">
       <PackagePath>System.CodeDom.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\system.linq.async\6.0.1\lib\net6.0\System.Linq.Async.dll">
+      <PackagePath>System.Linq.Async.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\moham\.nuget\packages\system.management\7.0.2\runtimes\win\lib\net7.0\System.Management.dll">
       <PackagePath>System.Management.dll</PackagePath>
