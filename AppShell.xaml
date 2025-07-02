@@ -66,6 +66,7 @@
        
         <ShellContent
         Title="Chat"
+        Route="Chat"
         Icon="https://i.imgur.com/0czlZpX.png"
         ContentTemplate="{DataTemplate views:ChatList}"
         />

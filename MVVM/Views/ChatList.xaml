@@ -15,7 +15,7 @@
         <StackLayout>
             <StackLayout Margin="8">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5" Spacing="5">
-                    <Button BackgroundColor="RoyalBlue" HorizontalOptions="Start" Text="New Message +" Margin="0"/>
+                    <Button BackgroundColor="RoyalBlue" HorizontalOptions="Start" Command="{Binding CreateNewChatCommand}" Text="New Message +" Margin="0"/>
                     <Button BackgroundColor="Orange" HorizontalOptions="Start" Text="Filter" Margin="0"/>
                     <Button Command="{Binding CreateTestChatCommand}" Margin="0" BackgroundColor="Orange" Text="Create Test Chat"/>
                 </StackLayout>
@@ -23,7 +23,7 @@
                 <CollectionView x:Name="ChatListView"
                 ItemsSource="{Binding Chats}"
                 SelectionMode="Single"
-                
+                                
                 SelectionChangedCommand="{Binding ChatSelectedCommand}"
                 SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference ChatListView}}"
                 >

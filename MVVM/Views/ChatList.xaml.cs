@@ -11,4 +11,10 @@ public partial class ChatList : ContentPage
 		InitializeComponent();
 		BindingContext = new ChatListViewModel(chatService);
 	}
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+		ChatListView.SelectedItem = null;
+    }
 }

@@ -87,7 +87,7 @@ namespace KudomionApp.Services
                 SenderId = senderId,
                 Content = content,
                 MessageTimeStamp = DateTime.UtcNow,
-                //Status = MessageStatus.Fired
+                Status = "SENT",
                 };
 
                 //Store in Messages / Firestore Collection:
@@ -101,6 +101,8 @@ namespace KudomionApp.Services
             }
 
         }
+
+
 
         public async Task<List<Chat>> GetChatsForUserAsync(string userId)
         {
@@ -135,7 +137,7 @@ namespace KudomionApp.Services
                 //User the new GetSnapshotAsync() to fetch the required chat's data:
                 var querySnap = await _firestore.Collection("Messages").
                     WhereEqualTo("ChatId", chatId).
-                    OrderBy("MessageTimestamp")
+                    OrderBy("MessageTimeStamp")
                     .GetSnapshotAsync();
 
                 foreach(var document in querySnap.Documents)
@@ -150,8 +152,8 @@ namespace KudomionApp.Services
 
             catch(Exception ex)
             {
-                Debug.WriteLine("Exception Occurred: " + ex.Message);
-                return null;
+                Debug.WriteLine("Exception Occurred: " + ex);
+                return new List<Message>();
             }
 
         }

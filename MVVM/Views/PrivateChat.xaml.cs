@@ -24,15 +24,37 @@ public partial class PrivateChat : ContentPage
             }
         }
     }
-    public PrivateChat(IFirebaseChatService chatService)
+    public PrivateChat(PrivateChatViewModel viewModel /*IFirebaseChatService chatService*/)
 	{
 		InitializeComponent();
-		BindingContext = new PrivateChatViewModel(chatService);
+        BindingContext = viewModel;
+		
 	
 		
 	}
 
+    private async void OnBackButtonClicked(object sender, EventArgs eventArgs)
+    {
+        // await Shell.Current.GoToAsync("//Chat", true);
 
+        /* if (Shell.Current.Navigation.NavigationStack.Count > 1)
+         {
+             await Shell.Current.Navigation.PopAsync();
+
+         }*/
+
+        await Shell.Current.Navigation.PopAsync();
+    }
+
+    protected override async void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        base.OnNavigatedTo(args);
+
+        if(BindingContext is PrivateChatViewModel vm)
+        {
+            await vm.OnNavigatedTo();
+        }
+    }
 
     private void EmojisListClicked(object sender, EventArgs e)
     {

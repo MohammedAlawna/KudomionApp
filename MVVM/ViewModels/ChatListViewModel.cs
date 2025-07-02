@@ -1,7 +1,11 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿using CommunityToolkit.Maui.Views;
+using CommunityToolkit.Mvvm.Input;
+using Kudomion.FirebaseManager;
 using Kudomion.Shared.ViewModels;
 using KudomionApp.Interfaces;
 using KudomionApp.MVVM.Models.Chat;
+using KudomionApp.MVVM.Views;
+using KudomionApp.MVVM.Views.Popups;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,9 +19,11 @@ namespace KudomionApp.MVVM.ViewModels
 {
     public class ChatListViewModel : ViewModelBase
     {
+        private readonly FirebaseHelper firebaseHelper;
         private readonly IFirebaseChatService _chatService;
         public ObservableCollection<Chat> Chats { get; set; } = new(); 
         public IAsyncRelayCommand CreateTestChatCommand { get; }
+        public IAsyncRelayCommand CreateNewChatCommand { get; }
         public IAsyncRelayCommand<Chat> OpenChatCommand { get; }
         public IRelayCommand<string> LoadChatsCommand { get; }
         public IAsyncRelayCommand<Chat> ChatSelectedCommand { get; }
@@ -38,9 +44,17 @@ namespace KudomionApp.MVVM.ViewModels
             OpenChatCommand = new AsyncRelayCommand<Chat>(OpenChat);
             ChatSelectedCommand = new AsyncRelayCommand<Chat>(ChatSelected);
             LoadChatsCommand = new AsyncRelayCommand<string>(LoadChats);
-
+            CreateNewChatCommand = new AsyncRelayCommand(CreateNewChat);
         }
+
         public ChatListViewModel() { }
+
+
+        public async Task CreateNewChat()
+        {
+            var popup = new SelectUserPopup();
+            Shell.Current.CurrentPage.ShowPopup(popup);
+        }
 
         public async Task LoadChats(string? userId)
         {
@@ -86,7 +100,15 @@ namespace KudomionApp.MVVM.ViewModels
                 return;
             }
 
-            await Shell.Current.GoToAsync($"PrivateChat?chatId={selectedChat.Id}");
+       /*     var chatId = selectedChat.Id;
+            var route = $"//Chat/PrivateChat?chatId={chatId}&_={Guid.NewGuid()}";
+
+            await Shell.Current.GoToAsync(route, true);*/
+
+            await Shell.Current.GoToAsync($"//Chat/PrivateChat?chatId={selectedChat.Id}&_={Guid.NewGuid()}");
+            // await Shell.Current.GoToAsync($"PrivateChat?chatId={selectedChat.Id}&t={DateTime.Now.Ticks}");
+
+
         }
 
         public async Task OpenChat(Chat? selectedChat)

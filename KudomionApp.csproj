@@ -133,6 +133,9 @@
 	  <MauiXaml Update="MVVM\Views\ChatList.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\Popups\SelectUserPopup.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\PrivateChat.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

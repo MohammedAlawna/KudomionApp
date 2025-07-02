@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:local="clr-namespace:KudomionApp.MVVM.ViewModels.Popups"
+    xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
+    x:Class="KudomionApp.MVVM.Views.Popups.SelectUserPopup"
+    x:Name="PopupRoot"
+    
+    >
+
+    <Frame BackgroundColor="Black">
+        <VerticalStackLayout BackgroundColor="Black">
+            <Label Text="Choose User to Chat With: " FontSize="15" TextColor="White" />
+        </VerticalStackLayout>
+    </Frame>
+    
+</toolkit:Popup>

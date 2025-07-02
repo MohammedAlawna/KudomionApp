@@ -2,59 +2,124 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KudomionApp.MVVM.Views.PrivateChat"
+             Shell.NavBarIsVisible="False"
              xmlns:viewModel="clr-namespace:KudomionApp.MVVM.ViewModels"
              BackgroundColor="#1c1c1c"
              Title="PrivateChat">
 
-    <ContentPage.BindingContext>
+    <!--<ContentPage.BindingContext>
         <viewModel:PrivateChatViewModel />
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
 
-
+   
 
 
     <StackLayout>
-        
+
+
+        <!-- CUSTOM BAR -->
+        <Grid Padding="10" BackgroundColor="#2c2c2c" HeightRequest="50" ColumnSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <!-- Back button -->
+                <ColumnDefinition Width="*" />
+                <!-- Username -->
+                <ColumnDefinition Width="Auto" />
+                <!-- Right icon -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Back Button -->
+            <ImageButton 
+        Source="https://i.imgur.com/7PskkSN.png" 
+        BackgroundColor="Transparent"
+        Clicked="OnBackButtonClicked"
+        HeightRequest="30" WidthRequest="30"
+        Grid.Column="0" />
+
+            <!-- Username Label -->
+            <Label 
+        Text="User_1" 
+        TextColor="White" 
+        VerticalOptions="Center" 
+        FontAttributes="Bold" 
+        FontSize="17"
+        Grid.Column="1" 
+        HorizontalOptions="Center" />
+
+            <!-- Right Icon/Button -->
+            <ImageButton 
+        Source="https://i.imgur.com/1DH8AL2.png" 
+        BackgroundColor="Transparent"
+        Command="{Binding InviteToDuelCommand}"
+        HeightRequest="30" WidthRequest="30"
+        Grid.Column="2" />
+        </Grid>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-        </Grid>
-        
-       
-        <ListView ItemsSource="{Binding Messages}"
+
+            <!-- ListView: Messages -->
+            <ListView ItemsSource="{Binding Messages}"
                   Grid.Row="0"
                   HasUnevenRows="True"
-                  x:Name="MessagesListView">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout>
-                            <Label Text="{Binding Content}" FontSize="14" FontAttributes="Bold" />
-                            <Label Text="{Binding MessageTimeStamp, StringFormat='{0:HH:mm}'}" FontSize="9" FontAttributes="Italic" HorizontalOptions="End" />
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                  x:Name="MessagesListView"
+                  SeparatorVisibility="None"
+                  BackgroundColor="#1c1c1c">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="4">
+                                <Border x:Name="MessageBubble" BackgroundColor="RoyalBlue" StrokeThickness="0.5" Stroke="Black">
 
-        <!-- Chat Input & Send Button -->
-        <StackLayout Grid.Row="1" Orientation="Horizontal" Padding="0" BackgroundColor="#1c1c1c" MaximumHeightRequest="50">
-            <!-- Emoji Placeholder (Future Implementation) -->
-            <Button Text="😊" WidthRequest="40" Clicked="EmojisListClicked"/>
-            <!--Clicked="OnEmojiClicked"-->
-            <!-- Message Input -->
-            <Editor x:Name="MessageEntry"
-               TextColor="White"
-               AutoSize="TextChanges"
-               Placeholder="Type a message..."
-               Text="{Binding NewMessage, Mode=TwoWay}"
-               HorizontalOptions="FillAndExpand"/>
+                                  
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="5" />
+                                    </Border.StrokeShape>
 
-            <!-- Send Button -->
-            <Button Text="📩" WidthRequest="50" Command="{Binding SendMessageCommand}" />
-        </StackLayout>
+                                    <!-- Different BG based on user sending message.-->
+                                    <Border.Triggers>
+                                        <DataTrigger TargetType="Border" Binding="{Binding SenderId}" Value="user_1">
+                                            <Setter Property="BackgroundColor" Value="RoyalBlue"/>
+                                            <Setter Property="HorizontalOptions" Value="End"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Border" Binding="{Binding SenderId}" Value="user_2">
+                                            <Setter Property="BackgroundColor" Value="Gray"/>
+                                            <Setter Property="HorizontalOptions" Value="Start" />
+                                        </DataTrigger>
+                                    </Border.Triggers>
+
+                                    <StackLayout Margin="5">
+                                       
+                                        <Label Text="{Binding Content}" FontSize="12" TextColor="White" FontAttributes="None" />
+                                    <Label Text="{Binding MessageTimeStamp, StringFormat='{0:HH:mm}'}" FontSize="6" TextColor="White" FontAttributes="Bold" HorizontalOptions="End" />
+                                      
+                                    </StackLayout>
+                                  
+                                </Border>
+                                       </StackLayout>
+                        </ViewCell>
+                        
+                    </DataTemplate>
+                    
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            <!-- Chat Input & Send Button -->
+            <StackLayout Grid.Row="1" Orientation="Horizontal" Padding="5" BackgroundColor="#1c1c1c">
+                <Button Text="😊" WidthRequest="40" Clicked="EmojisListClicked" />
+                <Editor Text="{Binding NewMessage, Mode=TwoWay}"
+                    TextColor="White"
+                    AutoSize="TextChanges"
+                    Placeholder="Type a message..."
+                    HorizontalOptions="FillAndExpand"/>
+                <Button Text="📩" WidthRequest="50" Command="{Binding SendMessageCommand}" />
+            </StackLayout>
+
+        </Grid>
+
+    
 
     </StackLayout>
 </ContentPage>
