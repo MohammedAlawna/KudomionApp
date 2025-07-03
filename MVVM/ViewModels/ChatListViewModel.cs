@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Maui.Views;
 using CommunityToolkit.Mvvm.Input;
+using Firebase.Auth;
+using Kudomion;
 using Kudomion.FirebaseManager;
 using Kudomion.Shared.ViewModels;
 using KudomionApp.Interfaces;
@@ -19,7 +21,7 @@ namespace KudomionApp.MVVM.ViewModels
 {
     public class ChatListViewModel : ViewModelBase
     {
-        private readonly FirebaseHelper firebaseHelper;
+        FirebaseHelper firebaseHelper = new FirebaseHelper();
         private readonly IFirebaseChatService _chatService;
         public ObservableCollection<Chat> Chats { get; set; } = new(); 
         public IAsyncRelayCommand CreateTestChatCommand { get; }
@@ -52,8 +54,38 @@ namespace KudomionApp.MVVM.ViewModels
 
         public async Task CreateNewChat()
         {
-            var popup = new SelectUserPopup();
-            Shell.Current.CurrentPage.ShowPopup(popup);
+            try
+            {
+
+
+
+                // 1. Get all users from your service (adjust as needed)
+                var allUsers = await firebaseHelper.GetAllUsers(); // Make sure this returns List<User>
+
+                // 2. Define the action to perform when a user is selected
+                Action<User> onUserSelected = async (selectedUser) =>
+                {
+
+
+                    // TODO: Call method to create or open chat with selectedUser
+                    await _chatService.CreateChatAsync(
+                        new List<string> { MainPage.currentUser.name, selectedUser.DisplayName },
+                        isPublic: false,
+                        isClan: false
+                        );
+                    //await CreateChatWithUser(selectedUser);
+                };
+
+                // 3. Create and show the popup
+                var popup = new SelectUserPopup(allUsers, onUserSelected);
+                Shell.Current.CurrentPage.ShowPopup(popup);
+            }
+            catch(Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error", "Exception occured: " + ex, "OK!");
+            }
+            /* var popup = new SelectUserPopup();
+             Shell.Current.CurrentPage.ShowPopup(popup);*/
         }
 
         public async Task LoadChats(string? userId)

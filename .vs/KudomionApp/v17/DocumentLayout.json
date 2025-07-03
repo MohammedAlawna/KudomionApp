@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\viewmodels\\chatlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\viewmodels\\chatlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\views\\popups\\selectuserpopup.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
       "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\views\\popups\\selectuserpopup.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\views\\chathub.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\views\\chathub.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\viewmodel\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:viewmodel\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\views\\chatlist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\views\\chatlist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\views\\chathub.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\views\\chathub.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\viewmodels\\chatlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\viewmodels\\chatlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\viewmodel\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:viewmodel\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\views\\popups\\selectuserpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,12 +27,8 @@
       "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\viewmodels\\popups\\selectuserpopupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\viewmodel\\leaderboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:viewmodel\\leaderboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\views\\privatechat.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\views\\privatechat.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|e:\\togloryprojects\\kudomiongit\\kudomionapp\\mvvm\\views\\chatlist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{55C41886-025E-41E7-903D-9098BA87A793}|KudomionApp.csproj|solutionrelative:mvvm\\views\\chatlist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,11 +38,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "ViewModel\\MainPage.xaml.cs",
+              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\MainPage.xaml.cs",
+              "RelativeToolTip": "ViewModel\\MainPage.xaml.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAowBcAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T01:42:53.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "ViewModel\\LoginPage.xaml.cs",
+              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\LoginPage.xaml.cs",
+              "RelativeToolTip": "ViewModel\\LoginPage.xaml.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAuwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T01:41:55.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SelectUserPopup.xaml",
+              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\Popups\\SelectUserPopup.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\Popups\\SelectUserPopup.xaml",
+              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\Popups\\SelectUserPopup.xaml",
+              "RelativeToolTip": "MVVM\\Views\\Popups\\SelectUserPopup.xaml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAewBgAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-03T01:29:12.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChatListViewModel.cs",
+              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\ViewModels\\ChatListViewModel.cs",
+              "RelativeDocumentMoniker": "MVVM\\ViewModels\\ChatListViewModel.cs",
+              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\ViewModels\\ChatListViewModel.cs",
+              "RelativeToolTip": "MVVM\\ViewModels\\ChatListViewModel.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAlwBcAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T00:09:02.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SelectUserPopup.xaml.cs",
+              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\Popups\\SelectUserPopup.xaml.cs",
+              "RelativeDocumentMoniker": "MVVM\\Views\\Popups\\SelectUserPopup.xaml.cs",
+              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\Popups\\SelectUserPopup.xaml.cs",
+              "RelativeToolTip": "MVVM\\Views\\Popups\\SelectUserPopup.xaml.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAD4vxAAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T23:58:52.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ChatList.xaml",
               "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\ChatList.xaml",
               "RelativeDocumentMoniker": "MVVM\\Views\\ChatList.xaml",
@@ -63,104 +120,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChatHub.xaml",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\ChatHub.xaml",
-              "RelativeDocumentMoniker": "MVVM\\Views\\ChatHub.xaml",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\ChatHub.xaml",
-              "RelativeToolTip": "MVVM\\Views\\ChatHub.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-02T00:12:47.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ChatListViewModel.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\ViewModels\\ChatListViewModel.cs",
-              "RelativeDocumentMoniker": "MVVM\\ViewModels\\ChatListViewModel.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\ViewModels\\ChatListViewModel.cs",
-              "RelativeToolTip": "MVVM\\ViewModels\\ChatListViewModel.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAswDUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T00:09:02.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ChatHub.xaml.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\ChatHub.xaml.cs",
-              "RelativeDocumentMoniker": "MVVM\\Views\\ChatHub.xaml.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\ChatHub.xaml.cs",
-              "RelativeToolTip": "MVVM\\Views\\ChatHub.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T23:59:50.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "SelectUserPopup.xaml.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\Popups\\SelectUserPopup.xaml.cs",
-              "RelativeDocumentMoniker": "MVVM\\Views\\Popups\\SelectUserPopup.xaml.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\Popups\\SelectUserPopup.xaml.cs",
-              "RelativeToolTip": "MVVM\\Views\\Popups\\SelectUserPopup.xaml.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAAAsAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T23:58:52.082Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SelectUserPopup.xaml",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\Popups\\SelectUserPopup.xaml",
-              "RelativeDocumentMoniker": "MVVM\\Views\\Popups\\SelectUserPopup.xaml",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\Popups\\SelectUserPopup.xaml",
-              "RelativeToolTip": "MVVM\\Views\\Popups\\SelectUserPopup.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAkwAoAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-01T02:00:20.669Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "SelectUserPopupViewModel.cs",
               "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\ViewModels\\Popups\\SelectUserPopupViewModel.cs",
               "RelativeDocumentMoniker": "MVVM\\ViewModels\\Popups\\SelectUserPopupViewModel.cs",
               "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\ViewModels\\Popups\\SelectUserPopupViewModel.cs",
               "RelativeToolTip": "MVVM\\ViewModels\\Popups\\SelectUserPopupViewModel.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAAACIAAAAAAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAABMAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T01:52:20.766Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Leaderboard.xaml.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\Leaderboard.xaml.cs",
-              "RelativeDocumentMoniker": "ViewModel\\Leaderboard.xaml.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\ViewModel\\Leaderboard.xaml.cs",
-              "RelativeToolTip": "ViewModel\\Leaderboard.xaml.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAMwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T01:48:44.66Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PrivateChat.xaml.cs",
-              "DocumentMoniker": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\PrivateChat.xaml.cs",
-              "RelativeDocumentMoniker": "MVVM\\Views\\PrivateChat.xaml.cs",
-              "ToolTip": "E:\\ToGloryProjects\\KudomionGit\\KudomionApp\\MVVM\\Views\\PrivateChat.xaml.cs",
-              "RelativeToolTip": "MVVM\\Views\\PrivateChat.xaml.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAYwCwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T00:42:31.455Z"
+              "WhenOpened": "2025-07-01T01:52:20.766Z",
+              "EditorCaption": ""
             }
           ]
         }

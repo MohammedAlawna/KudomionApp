@@ -7,13 +7,25 @@
     xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
     x:Class="KudomionApp.MVVM.Views.Popups.SelectUserPopup"
     x:Name="PopupRoot"
-    
     >
 
-    <Frame BackgroundColor="Black">
-        <VerticalStackLayout BackgroundColor="Black">
-            <Label Text="Choose User to Chat With: " FontSize="15" TextColor="White" />
+    <Border StrokeThickness="2" Stroke="Black" Padding="10" BackgroundColor="#2e2e2e">
+        <VerticalStackLayout Spacing="10">
+            <Label Text="Select a user to chat with:"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="White" />
+
+            <Picker x:Name="UserPicker"
+                    Title="Choose a user"
+                    TextColor="Black"
+                    BackgroundColor="White" />
+
+            <Button Text="Start Chat"
+                    Clicked="OnStartChatClicked"
+                    BackgroundColor="RoyalBlue"
+                    TextColor="White" />
         </VerticalStackLayout>
-    </Frame>
-    
+    </Border>
+
 </toolkit:Popup>
