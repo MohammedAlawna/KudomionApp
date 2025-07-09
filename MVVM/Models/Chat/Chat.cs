@@ -31,5 +31,7 @@ namespace KudomionApp.MVVM.Models.Chat
         //Unique Identifier for Users in the Chat.
         [FirestoreProperty]
         public List<string> ParticipantsIDs { get; set; }
+        [FirestoreProperty]
+        public Timestamp LastUpdated { get; set; }
     }
 }
