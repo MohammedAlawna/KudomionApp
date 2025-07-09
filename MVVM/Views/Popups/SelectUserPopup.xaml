@@ -19,6 +19,7 @@
             <Picker x:Name="UserPicker"
                     Title="Choose a user"
                     TextColor="Black"
+                   
                     BackgroundColor="White" />
 
             <Button Text="Start Chat"

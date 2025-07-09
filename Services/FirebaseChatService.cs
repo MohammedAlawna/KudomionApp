@@ -81,50 +81,55 @@ namespace KudomionApp.Services
         {
             try
             {
-                var message = new Message {
-                Id = Guid.NewGuid().ToString(),
-                ChatId = chatId,
-                SenderId = senderId,
-                Content = content,
-                MessageTimeStamp = DateTime.UtcNow,
-                Status = "SENT",
+                var message = new Message
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    ChatId = chatId,
+                    SenderId = senderId,
+                    Content = content,
+                    MessageTimeStamp = DateTime.UtcNow,
+                    Status = "SENT",
                 };
 
-                //Store in Messages / Firestore Collection:
+                // Store message in Firestore
                 var docRef = _firestore.Collection("Messages").Document(message.Id);
                 await docRef.SetAsync(message);
+
+                //  Update LastUpdated field in chat
+                var chatRef = _firestore.Collection("Chats").Document(message.ChatId);
+                await chatRef.UpdateAsync("LastUpdated", Timestamp.GetCurrentTimestamp());
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Debug.WriteLine("Exception occurred: " + ex.Message);
-                
             }
-
         }
 
 
 
-        public async Task<List<Chat>> GetChatsForUserAsync(string userId)
+        public async Task<(List<Chat> Chats, DocumentSnapshot? LastSnapshot)> GetChatsForUserAsync(string userId, DocumentSnapshot? lastSnapshot = null)
         {
-            try
-            {
-                var chats = new List<Chat>();
+            var query = _firestore.Collection("Chats")
+                          .WhereArrayContains("ParticipantsIDs", userId)
+                          .OrderBy("CreatedAt")
+                          .Limit(20); // Page size
 
-                var querySnapshot = await _firestore.Collection("Chats").
-                    WhereArrayContains("ParticipantsIDs", userId).GetSnapshotAsync();
+            if (lastSnapshot != null)
+                query = query.StartAfter(lastSnapshot);
 
-                foreach(var document in querySnapshot.Documents)
-                {
-                    var chat = document.ConvertTo<Chat>();
-                    chats.Add(chat);
-                }
-                return chats; 
-            }
-            catch(Exception ex)
+            var snapshot = await query.GetSnapshotAsync();
+
+            var chats = new List<Chat>();
+            foreach (var doc in snapshot.Documents)
             {
-                Debug.WriteLine("Exception occurred while getting chats: " + ex.Message);
-                return new List<Chat>();
+                var chat = doc.ConvertTo<Chat>();
+                chat.Id = doc.Id;
+                chats.Add(chat);
             }
+
+            var lastDocSnapshot = snapshot.Documents.LastOrDefault();
+
+            return (chats, lastDocSnapshot);
         }
 
         public async Task<List<Message>> GetMessagesAsync(string chatId)

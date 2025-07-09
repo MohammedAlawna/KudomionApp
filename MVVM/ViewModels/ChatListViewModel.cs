@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Maui.Views;
 using CommunityToolkit.Mvvm.Input;
 using Firebase.Auth;
+using Google.Cloud.Firestore;
 using Kudomion;
 using Kudomion.FirebaseManager;
 using Kudomion.Shared.ViewModels;
@@ -13,6 +14,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,11 +25,16 @@ namespace KudomionApp.MVVM.ViewModels
     {
         FirebaseHelper firebaseHelper = new FirebaseHelper();
         private readonly IFirebaseChatService _chatService;
-        public ObservableCollection<Chat> Chats { get; set; } = new(); 
+        public ObservableCollection<Chat> Chats { get; set; } = new();
+        //Storing LastSnapShot for Pagination -> beter performance, lazy loading:
+        private DocumentSnapshot? _lastChatSnapShot; 
+        private bool _isLoadingChats = false;
+        private bool _hasMoreChats = true;
         public IAsyncRelayCommand CreateTestChatCommand { get; }
         public IAsyncRelayCommand CreateNewChatCommand { get; }
         public IAsyncRelayCommand<Chat> OpenChatCommand { get; }
         public IRelayCommand<string> LoadChatsCommand { get; }
+        public IRelayCommand LoadMoreChatsCommand { get; }
         public IAsyncRelayCommand<Chat> ChatSelectedCommand { get; }
         string currentUserId;
 
@@ -45,39 +52,37 @@ namespace KudomionApp.MVVM.ViewModels
             //Commands:
             OpenChatCommand = new AsyncRelayCommand<Chat>(OpenChat);
             ChatSelectedCommand = new AsyncRelayCommand<Chat>(ChatSelected);
-            LoadChatsCommand = new AsyncRelayCommand<string>(LoadChats);
+            LoadChatsCommand = new AsyncRelayCommand<string>(userId => LoadChats(userId));
             CreateNewChatCommand = new AsyncRelayCommand(CreateNewChat);
+            LoadMoreChatsCommand = new AsyncRelayCommand(LoadMoreChats);
         }
 
-        public ChatListViewModel() { }
+  
+        private async Task LoadMoreChats()
+        {
+            if (_isLoadingChats || !_hasMoreChats) return;
+
+            _isLoadingChats = true;
+
+            var result = await _chatService.GetChatsForUserAsync(MainPage.currentLoggedInUser, _lastChatSnapShot);
+
+            foreach(var chat in result.Chats)
+            {
+                Chats.Add(chat);
+            }
+
+            _isLoadingChats = false;
+        }
 
 
         public async Task CreateNewChat()
         {
             try
             {
-
-
-
-                // 1. Get all users from your service (adjust as needed)
-                var allUsers = await firebaseHelper.GetAllUsers(); // Make sure this returns List<User>
-
-                // 2. Define the action to perform when a user is selected
-                Action<User> onUserSelected = async (selectedUser) =>
-                {
-
-
-                    // TODO: Call method to create or open chat with selectedUser
-                    await _chatService.CreateChatAsync(
-                        new List<string> { MainPage.currentUser.name, selectedUser.DisplayName },
-                        isPublic: false,
-                        isClan: false
-                        );
-                    //await CreateChatWithUser(selectedUser);
-                };
-
                 // 3. Create and show the popup
-                var popup = new SelectUserPopup(allUsers, onUserSelected);
+                var provider = App.Current.Handler.MauiContext.Services;
+                var popup = new SelectUserPopup(provider.GetRequiredService<ChatListViewModel>()
+                    , provider.GetRequiredService<IFirebaseChatService>());
                 Shell.Current.CurrentPage.ShowPopup(popup);
             }
             catch(Exception ex)
@@ -88,11 +93,48 @@ namespace KudomionApp.MVVM.ViewModels
              Shell.Current.CurrentPage.ShowPopup(popup);*/
         }
 
-        public async Task LoadChats(string? userId)
+        public async Task LoadChats(string? userId, bool isRefresh = false)
         {
-            var userChats = await _chatService.GetChatsForUserAsync(userId);
+            if (isRefresh)
+            {
+                Chats.Clear();
+                _lastChatSnapShot = null;
+                _hasMoreChats = true;
+            }
+
+            if (_isLoadingChats || !_hasMoreChats || userId is null) return;
+
+            _isLoadingChats = true;
+
+            var result = await _chatService.GetChatsForUserAsync(userId, _lastChatSnapShot);
+
+            var chats = result.Chats;
+            var lastSnapshot = result.LastSnapshot;
+
+            foreach (var chat in chats)
+            {
+                Chats.Add(chat);
+            }
+
+            _lastChatSnapShot = lastSnapshot;
+
+            if (chats.Count < 20)
+                _hasMoreChats = false;
+
+            _isLoadingChats = false;
+
+            /*     if(isRefresh)
+                 {
+                     Chats.Clear();
+                     _lastSnapShot = null;
+                 }*/
+
+
+
+
+            var rslts = await _chatService.GetChatsForUserAsync(userId);
             Chats.Clear();
-            foreach(var chat in userChats)
+            foreach(var chat in rslts.Chats)
             {
                 Chats.Add(chat);
             }
@@ -100,7 +142,7 @@ namespace KudomionApp.MVVM.ViewModels
 
         private async void AsyncChatsLoader()
         {
-            await LoadChats("user_1");
+            await LoadChats(MainPage.currentLoggedInUser);
         }
 
         

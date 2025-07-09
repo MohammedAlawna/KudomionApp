@@ -6,9 +6,9 @@
              xmlns:viewModel="clr-namespace:KudomionApp.MVVM.ViewModels"
              Title="ChatList">
 
-    <ContentPage.BindingContext>
+    <!--<ContentPage.BindingContext>
         <viewModel:ChatListViewModel/>
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
 
     <ScrollView VerticalOptions="FillAndExpand">
 
@@ -23,10 +23,14 @@
                 <CollectionView x:Name="ChatListView"
                 ItemsSource="{Binding Chats}"
                 SelectionMode="Single"
-                                
+                RemainingItemsThreshold="2"
+                RemainingItemsThresholdReachedCommand="{Binding LoadMoreChatsCommand}"
                 SelectionChangedCommand="{Binding ChatSelectedCommand}"
                 SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference ChatListView}}"
                 >
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" />
+                    </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Border HeightRequest="65" StrokeThickness="0.2" Stroke="Gray" BackgroundColor="#2e2e2e">

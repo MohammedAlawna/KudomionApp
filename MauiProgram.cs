@@ -27,7 +27,7 @@ namespace KudomionApp
             //Add Singelton: one instance for whole lifetime app.
             builder.Services.AddSingleton<IFirebaseChatService, FirebaseChatService>();
             builder.Services.AddTransient<PrivateChatViewModel>();
-            builder.Services.AddTransient<ChatListViewModel>();
+            builder.Services.AddSingleton<ChatListViewModel>();
 
             //Add Transient, a new instance every time it's needed (suitalbe for views, viewmodels).
             builder.Services.AddTransient<PrivateChat>();

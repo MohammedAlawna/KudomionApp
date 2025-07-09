@@ -1,4 +1,5 @@
-﻿using KudomionApp.MVVM.Models.Chat;
+﻿using Google.Cloud.Firestore;
+using KudomionApp.MVVM.Models.Chat;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace KudomionApp.Interfaces
         Task<string> CreateChatAsync(List<string> participantsIDs, bool isPublic, bool isClan);
         Task SendMessageAsync(string chatId, string senderId, string content);
         Task<List<Message>> GetMessagesAsync(string chatId);
-        Task<List<Chat>> GetChatsForUserAsync(string userId);
+        //Task<List<Chat>> GetChatsForUserAsync(string userId);
+        Task<(List<Chat> Chats, DocumentSnapshot? LastSnapshot)> GetChatsForUserAsync(string userId, DocumentSnapshot? lastSnapshot = null);
     }
 }
