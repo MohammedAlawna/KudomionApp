@@ -95,7 +95,7 @@ namespace KudomionApp.Services
                 var docRef = _firestore.Collection("Messages").Document(message.Id);
                 await docRef.SetAsync(message);
 
-                //  Update LastUpdated field in chat
+                // Update LastUpdated field in chat
                 var chatRef = _firestore.Collection("Chats").Document(message.ChatId);
                 await chatRef.UpdateAsync("LastUpdated", Timestamp.GetCurrentTimestamp());
             }
@@ -111,7 +111,7 @@ namespace KudomionApp.Services
         {
             var query = _firestore.Collection("Chats")
                           .WhereArrayContains("ParticipantsIDs", userId)
-                          .OrderBy("CreatedAt")
+                          .OrderByDescending("LastUpdated")
                           .Limit(20); // Page size
 
             if (lastSnapshot != null)

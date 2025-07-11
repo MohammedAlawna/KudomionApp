@@ -93,6 +93,7 @@ namespace KudomionApp.MVVM.ViewModels
              Shell.Current.CurrentPage.ShowPopup(popup);*/
         }
 
+
         public async Task LoadChats(string? userId, bool isRefresh = false)
         {
             if (isRefresh)
@@ -108,41 +109,22 @@ namespace KudomionApp.MVVM.ViewModels
 
             var result = await _chatService.GetChatsForUserAsync(userId, _lastChatSnapShot);
 
-            var chats = result.Chats;
-            var lastSnapshot = result.LastSnapshot;
-
-            foreach (var chat in chats)
+            foreach (var chat in result.Chats)
             {
                 Chats.Add(chat);
             }
 
-            _lastChatSnapShot = lastSnapshot;
+            _lastChatSnapShot = result.LastSnapshot;
 
-            if (chats.Count < 20)
+            if (result.Chats.Count < 20)
                 _hasMoreChats = false;
 
             _isLoadingChats = false;
-
-            /*     if(isRefresh)
-                 {
-                     Chats.Clear();
-                     _lastSnapShot = null;
-                 }*/
-
-
-
-
-            var rslts = await _chatService.GetChatsForUserAsync(userId);
-            Chats.Clear();
-            foreach(var chat in rslts.Chats)
-            {
-                Chats.Add(chat);
-            }
         }
 
         private async void AsyncChatsLoader()
         {
-            await LoadChats(MainPage.currentLoggedInUser);
+            await LoadChats(MainPage.currentLoggedInUser, isRefresh: true);
         }
 
         

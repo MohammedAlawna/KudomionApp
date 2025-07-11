@@ -76,7 +76,7 @@ namespace KudomionApp.MVVM.Views.Popups
                         );
 
 			
-					await _clViewModel.LoadChats(MainPage.currentLoggedInUser);
+					await _clViewModel.LoadChats(MainPage.currentLoggedInUser, isRefresh: true);
 
 					Close();
 				}
